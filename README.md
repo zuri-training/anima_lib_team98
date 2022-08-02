@@ -89,9 +89,11 @@ At this time, the library has the following animations
 4. Add the animation ID to the HTML element you would like to animate.
 5. Voila, the element is automatically animated.
 
-
 ## Interactive Animations
 
+JavaScript Web Animations API is used to create the experience for users to generate their preferred code combinations. This feature is made for users that want more granularity and control over their animations. This solution is implemented with plain JavaScript (no external libraries) so as to provide the best performance and a good starting point for developers to learn about creating interactive animation.
+ - Minimum Requirement: Understand the basics of JS and programming in general. Knowledge of JS WAAPI is not required.
+ - Reasons:  No need to rely on DOM-heavy manipulation techniques.
 
 ## Contributing
 
