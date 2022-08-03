@@ -91,13 +91,13 @@
 - MySQL
 
 ## Resources/Links
-[Animax Web Application](animax-js-css.com)
-[Figma](https://www.figma.com/file/mnP49B5GDsVrVBPIp1Q6g0/Animax-Project-Design?node-id=604%3A980)
-[Database Schema](https://figma.com)
-[First Presentation](https://drive.google.com/file/d/1RhV8apcyZNm-udaeVtNrwc2EhNOslGLj/view?usp=sharing)
-[Second Presentation](https://figma.com)
-[Meetings' Minutes](docs.google.com)
-[List of Accomplished Tasks](https://docs.google.com/spreadsheets/d/1hxQbE1XdJ99-JEQI5cQ6hj8YUqHRTQ0KgzNLgOPfWa8/edit#gid=1652708415)
+ - [Animax Web Application](animax-js-css.com)
+ - [Figma](https://www.figma.com/file/mnP49B5GDsVrVBPIp1Q6g0/Animax-Project-Design?node-id=604%3A980)
+ - [Database Schema](https://figma.com)
+ - [First Presentation](https://drive.google.com/file/d/1RhV8apcyZNm-udaeVtNrwc2EhNOslGLj/view?usp=sharing)
+ - [Second Presentation](https://figma.com)
+ - [Meetings' Minutes](docs.google.com)
+ - [List of Accomplished Tasks](https://docs.google.com/spreadsheets/d/1hxQbE1XdJ99-JEQI5cQ6hj8YUqHRTQ0KgzNLgOPfWa8/edit#gid=1652708415)
 
 ## Introduction
 
