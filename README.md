@@ -1,44 +1,4 @@
-<style>
-  .anim-pulse {
-    animation-name: pulse;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-  @keyframes pulse {
-    0% {
-      opacity: 0.1;
-    }
-
-    10% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0.3;
-    }
-}
-  .animation-row {
-    display: flex;
-    padding-top: 80px;
-    padding-left:80px;
-}
-  .circle {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(65, 33, 95);
-    border-radius: 5cm;
-}
-  #bounce-1x {
-    animation: bounce 1s linear infinite;
-}
-  @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      
-      50% { transform: translateY(-50%);  } 
-  }
-</style>
+<link rel="stylesheet" type="text/css" media="all" href="style.css" />
 
 <h1 align="center">
     <a id="identifier" class="anim-pulse" href="https://animax.com"><img src="https://raw.githubusercontent.com/emarc99/Huddle-Landing-Page/main/images/animax.js.jpeg" width="175px" alt="< animax.js >"></a>
@@ -135,7 +95,7 @@ At this time, the library has the following animations:
 2. Extract the zipped file.
 3. Import the library into your project using the <code>link</code> tag. 
    
-   ```
+   ```html
    <html>
    <head>
     <meta charset="utf-8">
@@ -154,7 +114,7 @@ At this time, the library has the following animations:
    ```
 
 4. Add the animation ID, which is <code>bounce-1x"</code> in this instance, to the HTML element you would like to animate.
-   ```
+   ```html
    <body>
    
     ........
