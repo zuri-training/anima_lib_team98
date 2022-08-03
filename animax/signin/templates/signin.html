@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'signin.css' %}" />
+    <title>Signin</title>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Anima Lib</h1>
+    </header>
+    <!-- Signin Section -->
+    <section>
+      <form action="#">
+        <fieldset>
+          <h2>Welcome to Anima Lib</h2>
+          <div>
+            <p>
+              <label for="E-mail">Email</label>
+              <br />
+              <input
+                class="details"
+                type="email"
+                name="email"
+                placeholder="johndoe@gmail.com"
+                required
+              />
+            </p>
+            <p>
+              <label for="password">Password</label>
+              <br />
+              <input
+                class="details"
+                type="password"
+                name="password"
+                placeholder="********"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter"
+                required
+              />
+            </p>
+          </div>
+          <div>
+            <button type="submit">Sign in</button>
+          </div>
+          <div class="afterbutton">
+            <div class="remember">
+              <label for="remember"
+                ><input type="checkbox" id="remember" name="remember" />
+                Remember me</label
+              >
+              <a class="forgpass" href="#">Forgot password?</a>
+            </div>
+          </div>
+          <div class="signup">
+            Don't have an account? <a href="signup.html"><b>Sign up</b></a>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>
