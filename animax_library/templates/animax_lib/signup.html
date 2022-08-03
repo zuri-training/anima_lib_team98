@@ -1,0 +1,89 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <!-- Header Section -->
+    <header>
+      <h1>Anima Lib</h1>
+    </header>
+    <!-- Signup Form -->
+      <form method="POST" action>
+        {% csrf_token %}
+        <fieldset>
+          <h2>Get Started</h2>
+          <div>
+            <p>
+              <label class="label" for="fullname">Full Name</label>
+              <br />
+              <!-- <input
+                type="text"
+                name="fullname"
+                placeholder="John Doe"
+                pattern="[A-Za-z]{1,30} [A-Za-z]{1,30}"
+                title="Enter full name using alphabets only"
+                required
+              /> -->
+              {{form.username}}
+            </p>
+
+            <p>
+              <label class="label" for="E-mail">Email</label>
+              <br />
+              <!-- <input
+                type="email"
+                name="email"
+                placeholder="johndoe@gmail.com"
+                required
+              /> -->
+              {{form.email}}
+            </p>
+
+            <p>
+              <label class="label" for="password">Password</label>
+              <br />
+              <!-- <input
+                type="password"
+                name="password"
+                placeholder="********"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter"
+                required
+              /> -->
+              {{form.password1}}
+            </p>
+
+            <p>
+              <label class="label" for="cpassword">Confirm Password</label>
+              <br />
+              <!-- <input
+                type="password"
+                name="cpassword"
+                placeholder="********"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                title="Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter"
+                required
+              /> -->
+              {{form.password2}}
+            </p>
+          </div>
+
+          <div>
+            <button type="submit">Sign up </button>
+          </div>
+          <div class="signin">
+            Already have an account? <a href="{% url 'register' %}"><b>Sign in</b></a>
+          </div>
+          <div class="or">
+            OR
+          </div>
+          <div class="icons">
+            <i class="fab fa-google fa-5x"></i>
+            <i class="fa fa-apple fa-5x"></i>
+          </div>
+          <div class="agreement">
+            By signing up, you agree to our <a id="terms" href="#"><b>Terms</b></a> 
+            & Condition and <a id="privacy" href="#"><b>Privacy Policy</b></a>
+          </div>
+        </fieldset>
+      </form>
+    {% endblock %}
