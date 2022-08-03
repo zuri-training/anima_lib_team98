@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="style.css" />
 
 <h1 align="center">
-    <a id="identifier" class="anim-pulse" href="https://animax.com"><img src="https://raw.githubusercontent.com/emarc99/Huddle-Landing-Page/main/images/animax.js.jpeg" width="175px" alt="< animax.js >"></a>
+    <a class="anim-pulse" href="https://animax.com"><img src="https://raw.githubusercontent.com/emarc99/Huddle-Landing-Page/main/images/animax.js.jpeg" width="175px" alt="< animax.js >"></a>
 </h1>
 
 <h1 align="center">Zuri Team 098
@@ -128,7 +128,10 @@ At this time, the library has the following animations:
    ```
 
 5. Voila, the element is automatically animated.
-   <div class="animation-row"><div id="bounce-1x" class="circle"></div></div>
+   
+   <div class="animation-row">
+    <div id="bounce-1x" class="circle"></div>
+   </div>
         
         
 
