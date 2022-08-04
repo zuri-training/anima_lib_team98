@@ -153,11 +153,11 @@ See [DEVELOP.md](https://github.com/zuri-training/anima_lib_team98/blob/develop/
 |  Tobechukwu Eloke  | Charles Precious  |
 |     Tomi Etta      | Mustapha Balogun  |
 |  Zainab Bodude     |  Aroso Emmanuel Adedeji |
-|   Khadijat Bakare  |    Solomon Ezeatum |
+|   Khadijat Bakare  | Oguagu Ekenechukwu Daniel |
 |   Coker Adebusola  |   David Alatishe   |
 |   Victor Roosevelt |  Oluji Onyekachukwu |
-|     Fatoye Ruth    | Oguagu Ekenechukwu Daniel  |
-| Aminu Musa Ambursa | Francois Pape Diouf  |
+|     Fatoye Ruth    | 
+| Aminu Musa Ambursa |  
 | Olamilekan Phillip |  
 | Joshua Opeyemi Adebisi |  
 | Salau Shukurat |  
