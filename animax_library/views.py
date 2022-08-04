@@ -10,10 +10,11 @@ from .forms import User
 def home(request):
     return render(request, 'animax_lib/home.html')
 
-def register(request):
+def signupform(request):
     if request.method == 'POST':
         form = Signin(request.POST)
         if form.is_valid():
+
             form.save()
             return redirect('home')
     form = Signin()
@@ -21,7 +22,7 @@ def register(request):
     return render(request, 'animax_lib/signup.html', context)
 
 
-def loginform(request):
+def signinform(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')
