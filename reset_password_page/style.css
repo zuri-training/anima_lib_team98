@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+    width: 1440px;
+    height: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF5FA;
+    font-family:sans-serif;
+}
+main{
+    width: 1008px;
+    height: 593px;
+    border-radius: 8px;
+    background-color: #F1C0F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input{
+    margin-bottom: 10px;
+    
+    background-color: #ffe2ff;
+    box-sizing: border-box;
+}
+form input,
+form button{
+    width: 100%;
+    border-radius: 8px;  
+    border: none;
+    padding: 10px;
+}
+h2{
+    
+    margin-bottom: 3rem;
+    width: 376px;
+height: 58px;
+margin-left: 100px;
+top: 88px;
+
+/* HEADLINE 4 */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 120%;
+/* identical to box height, or 58px */
+
+
+/* Anima/neutral/01 */
+
+color: #4E4E4E;
+    
+   
+}
+label{
+    width: 286px;
+height: 34px;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 140%;
+margin-bottom: 3rem;
+color: #737373;
+
+}
+.input-group{
+
+    position: relative;
+    width: 100%;
+    margin-bottom: 3rem;
+
+
+
+}
+input[type="password"]{
+    
+    box-sizing: border-box;
+    padding: 0.5rem;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 450px 16px 32px;
+gap: 10px;
+
+width: 588px;
+height: 64px;
+
+/* Anima/text/white */
+
+background: #FCE8FC;
+border-radius: 4px;
+
+
+}
+.toggle{
+background: none;
+border: none;
+font-weight: 600;
+position: absolute;
+right: .75rem;
+top: 3.5rem;
+z-index: 9;
+
+border: 2px  #A6A6A6;
+
+}
+form button{
+    
+    color: #FAF5FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 250px;
+    
+    width: 585px;
+    height: 66px;
+    left: 212px;
+    top: 508px;
+    
+    /* Anima/primary/01 */
+    
+    background: #D542D7;
+    border-radius: 8px;
+    font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 140%;
+
+
+
+
+}
+form .already-user{
+   
+height: 28px;
+margin-left: 200px;
+margin-top: 30px;
+
+/* BODY 1 */
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+/* identical to box height, or 28px */
+
+
+/* Anima/neutral/01 */
+
+color: #4E4E4E;
+
+    
+}
+form .login{
+    color:#7D1B7E ;
+    font-weight: bold;
+}
+.backspace{
+    position: absolute;
+    left: 18.75%;
+    right: 37.5%;
+    top: 25.62%;
+
+    color:  #7D1B7E;
+    font-size: xx-large;
+}  
