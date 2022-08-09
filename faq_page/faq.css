@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1440px) {
+  .whole {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 15px;
+  }
+  h1 {
+    margin: 5%;
+    text-align: center;
+    justify-content: center;
+  }
+  h3 {
+    text-align: center;
+    justify-content: center;
+  }
+  h3 a {
+    text-decoration: none;
+    color: #c231c4;
+  }
+  .accordion {
+    border-style: none none solid none;
+    border-width: 3px;
+    border-color: #c231c4;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 80%;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 10%;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .accordion:hover {
+    border-style: none none solid none;
+    border-color: #7d1b7e;
+    background: linear-gradient(
+      93.52deg,
+      rgba(241, 192, 242, 0) -12.58%,
+      rgba(194, 49, 196, 0.5) 100%
+    );
+  }
+  .accordion:after {
+    content: "\002b"; /* Unicode character for plus (+) sign */
+    font-size: 20px;
+    color: #000;
+    padding: 3px 9px;
+    background-color: #e381e4;
+    float: left;
+    margin-right: 40px;
+  }
+
+  .active:after {
+    content: "\002d"; /* Unicode icon for minus (-) sign */
+    font-size: 20px;
+    color: #000;
+    padding: 3px 11px;
+    background-color: #e381e4;
+  }
+  .panel {
+    font-size: 15px;
+    padding: 0 18px;
+    display: none;
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+  }
+}
