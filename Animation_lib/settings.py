@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'crispy_forms',
     'base.apps.BaseConfig'
 ]
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,7 +86,7 @@ DATABASES = {
         'USER': 'root',
         'HOST': '127.0.0.1',
         'PORT': 3306,
-        'PASSWORD':'Mustybalogs-1'
+        'PASSWORD':'Charles:Precious:2846'
     }
 }
 
