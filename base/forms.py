@@ -27,7 +27,7 @@ class Signup(UserCreationForm):
             'name':'password1',
             'id' : 'password1',
             'type' : 'password',
-            
+            'title' : "Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter",
             'placeholder' : '********',
             'maxlength' : '22',
             'minlength' : '8' 
@@ -37,7 +37,7 @@ class Signup(UserCreationForm):
             'name':'password2',
             'id' : 'password2',
             'type' : 'password',
-            
+            'title' : "Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter",
             'placeholder' : '********',
             'maxlength' : '22',
             'minlength' : '8' 
