@@ -1,8 +1,8 @@
-
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import Signup
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -10,6 +10,7 @@ from django.contrib.auth.models import User
 
 def home(request):
     return render(request, 'Animation_lib/home.html')
+
 
 def signupform(request):
     if request.method == 'POST':
@@ -39,7 +40,7 @@ def signupform(request):
     context = {'form' : form}
     return render(request, 'Animation_lib/signup.html', context)
 
-
+# @login_required(login_url='signup')
 def signinform(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -61,3 +62,8 @@ def signinform(request):
     
     context = {} 
     return render(request, 'Animation_lib/signin.html', context)
+
+
+def logoutUser(request):
+    logout(request)
+    return redirect('signin')
