@@ -1,9 +1,10 @@
-
 from django.shortcuts import render, redirect
 from .forms import Signup
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+
+
 
 # Create your views here.
 
@@ -15,7 +16,12 @@ def signupform(request):
     if request.method == 'POST':
         form = Signup(request.POST)
 
-        if form.is_valid():
+
+        email = request.POST['email']
+        if User.objects.filter(email=email).exists():
+            messages.error(request, 'Email is already registered')
+
+        elif form.is_valid():
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             password = form.cleaned_data.get('password2')
@@ -25,15 +31,18 @@ def signupform(request):
             
             else:
                 form.save()
+
+                messages.success(request, 'Your account has been created, you can log in now')
+
                 new_user = authenticate(username = username, password = raw_password)
                 if new_user is not None:
                     
                     login(request, new_user)
-                    return redirect('home')
+                    return redirect('signup')
                 else:
                     messages.error(request, 'Service TimedOut')
         else:
-            messages.error(request, 'Check Your Details Carefully')
+            messages.error(request, 'An error has occured during registeration')
     else:
         form = Signup()
     context = {'form' : form}
@@ -56,8 +65,9 @@ def signinform(request):
         if user is not None:
             login(request, user)
             return redirect('home')
-        else:
+        else: 
             messages.error(request, 'Wrong Password')
     
     context = {} 
     return render(request, 'Animation_lib/signin.html', context)
+
