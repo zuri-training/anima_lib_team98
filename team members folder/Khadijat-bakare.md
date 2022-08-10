@@ -11,3 +11,5 @@ I helped the devs build out the about us page since they are short of devs and t
 I refactored the former design of the signin and sign up page to create a more harmonious design https://github.com/zuri-training/anima_lib_team98/issues/67#issuecomment-1210896428  https://github.com/zuri-training/anima_lib_team98/issues/67
 
 I wrote out some of the content for the documentation page to replace the dummy texts https://github.com/zuri-training/anima_lib_team98/issues/53  https://github.com/zuri-training/anima_lib_team98/issues/53#issuecomment-1210911427
+
+I created microinteractions for the documentation side menu https://github.com/zuri-training/anima_lib_team98/issues/91 https://github.com/zuri-training/anima_lib_team98/issues/91#issuecomment-1210981325
