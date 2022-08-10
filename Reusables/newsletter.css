@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+.newsletter {
+    background-color: #F1C0F2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.newslet-content {
+    background-color: inherit;
+    width: 29%;
+}
+.newslet-content p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+.newslet-content p:last-child {
+    color: #4A4656;
+    font-weight: 400;
+    font-size: 14px;
+}
+.newslet-form {
+    display: flex;
+    width: 50%;
+}
+.newslet-form input {
+    padding: 19px 10px;
+    background-color: #F2F2F2;
+    border: 1px solid #A29DAF;
+    border-radius: 8px 0px 0px 8px;
+    width: 70%;
+}
+.newslet-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #FF4D6A;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 20px;
+    color: #F2F2F2;;
+}
