@@ -50,14 +50,23 @@ form{
     min-width: 300px;
     width: 60vw;
 }
-input[type=email] {
+input[type=password] {
     width: 100%;
-    color: white;
     margin: 6px 0;
     padding: 10px 15px;
     border-radius: 4px;
     border: 1px;
     box-sizing: border-box;
+}
+.toggle{
+    background: none;
+    border: none;
+    font-weight: 600;
+    position: absolute;
+    right: .75rem;
+    top: 3.5rem;
+    z-index: 9;
+    border: 2px  #A6A6A6;
 }
 input[type=submit] {
     width: 100%;
