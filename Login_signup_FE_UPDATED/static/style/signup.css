@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+/* For Mobile and Small Screens */
+@media screen and (max-width: 374px) and (min-width: 280px) {
+  body {
+    font-family: Calibri;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  h1 {
+    margin: 10px;
+    padding: 30px;
+    color: white;
+    background-color: #7d1b7e;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .label {
+    margin-left: 15%;
+  }
+  input {
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 70%;
+    margin-bottom: 2%;
+    margin-left: 15%;
+  }
+  fieldset {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(240, 233, 233);
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  button.signup {
+    background-color: #ff3355;
+    color: white;
+    border: white;
+    width: 70%;
+    margin-top: 15px;
+    margin-left: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .signin {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .signin a,
+  button a,
+  p a {
+    text-decoration: none;
+    color: #d542d7;
+  }
+  .or:before {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 115px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    background: black;
+  }
+  .or {
+    position: relative;
+    max-width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  .or:after {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 115px;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    background: black;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-google {
+    background: conic-gradient(
+        from -45deg,
+        #ea4335 110deg,
+        #4285f4 90deg 180deg,
+        #34a853 180deg 270deg,
+        #fbbc05 270deg
+      )
+      73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-apple {
+    color: black;
+  }
+  .fa-facebook {
+    color: blue;
+  }
+  .icons button {
+    border: 1px solid #d542d7;
+    width: 70%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .guest {
+    margin-top: 3%;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+}
+
+/* For Desktop and Large Screens */
+@media screen and (max-width: 1440px) {
+  body {
+    font-family: Calibri;
+    font-size: 15px;
+    width: 99%;
+    height: 100%;
+  }
+  h1 {
+    margin: 10px;
+    padding: 30px;
+    color: white;
+    background-color: #7d1b7e;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .label {
+    margin-left: 15%;
+  }
+  input {
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 70%;
+    margin-bottom: 2%;
+    margin-left: 15%;
+  }
+  fieldset {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(240, 233, 233);
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  button.signup {
+    background-color: #ff3355;
+    color: white;
+    border: white;
+    width: 70%;
+    margin-top: 15px;
+    margin-left: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .signin {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .signin a,
+  button a,
+  p a {
+    text-decoration: none;
+    color: #d542d7;
+  }
+  .or:before {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    background: black;
+  }
+  .or {
+    position: relative;
+    max-width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  .or:after {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    background: black;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-google {
+    background: conic-gradient(
+        from -45deg,
+        #ea4335 110deg,
+        #4285f4 90deg 180deg,
+        #34a853 180deg 270deg,
+        #fbbc05 270deg
+      )
+      73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-apple {
+    color: black;
+  }
+  .fa-facebook {
+    color: blue;
+  }
+  .icons button {
+    border: 1px solid #d542d7;
+    width: 70%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .guest {
+    margin-top: 3%;
+    margin-bottom: 10%;
+    text-align: center;
+  }
+}
