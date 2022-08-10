@@ -20,6 +20,6 @@
 
 10. An overlay to contain user comments from the documentation pages https://github.com/zuri-training/anima_lib_team98/issues/62#issuecomment-1210626303
 
-11. I added a navigation guide that will lead users to the FAQ page from contact us https://github.com/zuri-training/anima_lib_team98/issues/13#issuecomment-1200391188
+11. I added a navigation guide that will lead users to the FAQ page from contact us https://github.com/zuri-training/anima_lib_team98/issues/32#issuecomment-1204588167
 
 12. I created the style guides for input fields, alert popup, dropdown to ensure consistency in our design https://github.com/zuri-training/anima_lib_team98/issues/13#issuecomment-1200391188
