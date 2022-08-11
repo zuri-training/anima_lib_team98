@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="resetconfirm.css" />
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   </head>
   <body>
@@ -16,20 +16,18 @@
     </header>
     <main>
       <div class="back">
-        <a href="#"><ion-icon name="backspace-outline"></ion-icon></a>
+        <a href="#"><ion-icon name="arrow-back"></ion-icon></a>
     </div>
       <div class="container">
         <form>
           <h2>Reset Password</h2>
           <div class="input">
-            <label for="txtEnternew">Enter your new password</label>
-            <input type="password" name="pass"class="form-control" placeholder="......."/>
-            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <label for="password">Password</label> <br>
+            <input type="password" name="password"class="password" placeholder="......."/>
           </div>
           <div class="input">
-            <label for="txtconfirmnew">Confirm new password</label>
-            <input type="password" name="pass" class="form-control" placeholder="......."/>
-            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            <label for="password">Confirm password</label> <br>
+            <input type="password" name="password" class="password" placeholder="......."/>
           </div>
           <div class="send">
             <input type="submit" name="submit" value="Save">
