@@ -4,7 +4,7 @@ If you've made it this far, thank you! We appreciate your contribution, and hope
 
 ## Structure
 
-The library has been compressed compressed into a zip file as `animax.zip`. The library contains three primary files:
+The library has been compressed compressed into a zip file as `animax.zip`. The library contains two primary files:
 
   - animax.css : Animation codes are written and implemented using CSS Animations and saved in the `animax.css` file. This file contains all our available animations that user can apply into their web projects using the corresponding CSS selector such as the ID.
   - animation-usage-guide.md : This provides the user with a user-friendly manual of sort that shows the ID they can use to apply a particular CSS animation and their variations contained in `animax.css`. This provides the user with an offline support so they do not have to memorize any code or visit the web library eveytime they want to make use of our product.
