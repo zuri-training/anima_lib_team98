@@ -1,36 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-    <script src="app.js"></script>
-  </head>
+{% extends 'main.html' %}
 
-  <body>
+{% block content %}
     <header>
       <a href="#" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" />
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" />
       </a>
       <nav class="navbar">
         <a href="#" class="active bd-r">Home</a>
         <a href="Documentation.html" class="bd-r">Documentation</a>
         <a href="Animations.html" class="bd-r" class="bd-r">Animations</a>
-        <a href="About.html">About</a>
+        <a href="{% url 'about' %}">About</a>
         <button class="sign-up">
-          <span>Sign Up</span>
+          <span><a href="{% url 'signup' %}">Sign Up</a></span>
         </button>
         <button class="download">
-          <img src="assets/download-16.png" alt="download library" />
+          <img src="../static/assets/download-16.png" alt="download library" />
           <span>Download</span>
         </button>
       </nav>
@@ -49,7 +33,7 @@
         </div>
         <div class="landing-image">
           <img
-            src="assets/Website-interface.svg"
+            src="../static/assets/Website-interface.svg"
             alt="web-animation-interface"
           />
         </div>
@@ -64,14 +48,14 @@
           </div>
           <img
             class="step-logo"
-            src="assets/download-library.svg"
+            src="../static/assets/download-library.svg"
             alt="download library icon"
           />
         </div>
         <div class="step-card">
           <img
             class="step-logo"
-            src="assets/extract-library.svg"
+            src="../static/assets/extract-library.svg"
             alt="extract library icon"
           />
           <div class="step-text">
@@ -81,24 +65,24 @@
               to your desktop.
             </p>
           </div>
-          <img class="number-right" src="assets/2.svg" alt="second step" />
+          <img class="number-right" src="../static/assets/2.svg" alt="second step" />
         </div>
         <div class="step-card">
-          <img class="number-left" src="assets/3.svg" alt="third step" />
+          <img class="number-left" src="../static/assets/3.svg" alt="third step" />
           <div class="step-text">
             <h2>Move Library Files</h2>
             <p>Move the library files into your development project.</p>
           </div>
           <img
             class="step-logo"
-            src="assets/move-library-folder.svg"
+            src="../static/assets/move-library-folder.svg"
             alt="move file/folder icon"
           />
         </div>
         <div class="step-card">
           <img
             class="step-logo"
-            src="assets/import-library.svg"
+            src="../static/assets/import-library.svg"
             alt="import library icon"
           />
           <div class="step-text">
@@ -108,7 +92,7 @@
               like.
             </p>
           </div>
-          <img class="number-right" src="assets/4.svg" alt="fourth step" />
+          <img class="number-right" src="../static/assets/4.svg" alt="fourth step" />
         </div>
       </div>
       <div class="features">
@@ -121,7 +105,7 @@
           </p>
           <a href="#"
             >Read more in Documentation
-            <img src="assets/arrow-right.svg" alt="arrow-right"
+            <img src="..static/assets/arrow-right.svg" alt="arrow-right"
           /></a>
         </div>
         <div class="content-2">
@@ -140,36 +124,35 @@
         <div class="animax-a">
           <h5>Sliding Text</h5>
           <p class="center">Sample Text</p>
-          <button class="right animation-btn"><img src="./assets/play.svg" alt="play"></button>
+          <button class="right animation-btn"><img src="../static/assets/play.svg" alt="play"></button>
         </div>
         <div class="animax-b">
           <h5>Fading Text</h5>
           <p class="center">Sample Text</p>
-          <button class="right animation-btn"><img src="./assets/play.svg" alt="play"></button>
+          <button class="right animation-btn"><img src="../static/assets/play.svg" alt="play"></button>
         </div>
         <div class="animax-c">
           <h5>Rotating Cube</h5>
           <div id="rotate" class="cube rotate center"></div>
-          <button onclick="playRotate()" class="right animation-btn"><img src="./assets/play.svg" alt="play"></button>
+          <button onclick="playRotate()" class="right animation-btn"><img src="../static/assets/play.svg" alt="play"></button>
         </div>
         <div class="animax-d">
           <h5>Bouncing Circle</h5>
           <div id="bounce" class="circle bounce center"></div>
-          <button onclick="playBounce()" class="right animation-btn"><img src="./assets/play.svg" alt="play"></button>
+          <button onclick="playBounce()" class="right animation-btn"><img src="../static/assets/play.svg" alt="play"></button>
         </div>
         <div class="animax-e">
           <h5>Move Text Up</h5>
           <p class="center">Sample Text</p>
-          <button class="right animation-btn"><img src="./assets/play.svg" alt="play"></button>
+          <button class="right animation-btn"><img src="../static/assets/play.svg" alt="play"></button>
         </div>
         <div class="animax-f">
           <button>
             Check out more animations
-            <img src="assets/arrow-right.svg" alt="arrow-right" />
+            <img src="../static/assets/arrow-right.svg" alt="arrow-right" />
           </button>
         </div>
       </div>
     </main>
     <footer></footer>
-  </body>
-</html>
+  {% endblock %}

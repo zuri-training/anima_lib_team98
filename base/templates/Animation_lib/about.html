@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/svg" sizes="32x32" href="./images/Animax.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="about_us.css">
-    <title>About Us</title>
-</head>
+{% extends 'main.html' %}
 
-<body>
+{% block content %}
     <!-- header section. This include the topmost navigation -->
     <Section>
         <header>
             <div id="logo">
-                <img src="./images/logo.svg" alt="Animax logo">
+                <img src='../static/images/logo.svg' alt="Animax logo">
             </div>
             <nav class="nav-bar">
                 <ul>
@@ -25,7 +14,7 @@
                     <li><a href="#" class="border">Animations</a></li>
                     <li><a href="#" class="current border">About</a></li>
                     <li><a href="signup.html">Sign Up</a></li>
-                    <li><button><img src="./Images/Download.svg" alt="download"> <span>Download</span></button></li>
+                    <li><button><img src="../static/Images/Download.svg" alt="download"> <span>Download</span></button></li>
                 </ul>
             </nav>
         </header>
@@ -95,7 +84,7 @@
             <section class="team">
                 <section>
                     <div class="team-img">
-                        <img src="./Images/Tobe.png" alt="TobeChukwu" width="256px">
+                        <img src="../static/Images/Tobe.png" alt="TobeChukwu" width="256px">
                     </div>
                     <div class="team-det">
                         <h6>TobeChukwu</h6>
@@ -105,7 +94,7 @@
     
                 <section>
                     <div class="team-img">
-                        <img src="./Images/Dhera.png" alt="Precious" width="256px">
+                        <img src="../static/Images/Dhera.png" alt="Precious" width="256px">
                     </div>
                     <div class="team-det">
                         <h6>Precious</h6>
@@ -115,7 +104,7 @@
     
                 <section>
                     <div class="team-img">
-                        <img src="./Images/Emarc.png" alt="Emmanuel" width="256px">
+                        <img src="../static/Images/Emarc.png" alt="Emmanuel" width="256px">
                     </div>
                     <div class="team-det">
                         <h6>Emmanuel</h6>
@@ -126,7 +115,7 @@
             </section>
 
             <div id="more">
-                <a href="#">Check out our frequently asked questions <img src="./Images/arrow-right.svg" alt="check Frequently asked questions"></a>
+                <a href="#">Check out our frequently asked questions <img src="../static/Images/arrow-right.svg" alt="check Frequently asked questions"></a>
             </div>
         </section>
 
@@ -144,17 +133,17 @@
     <footer class="main">
         <section class="animax-footer">
             <div class="logo">
-                <img src="./Images/logo.svg" alt="">
+                <img src="../static/Images/logo.svg" alt="">
             </div>
 
             <section class="company-info">
                 <div>
                     <ul class="social">
-                        <a href="#" class=""><img src="./Images/Facebook - Negative.svg" alt="facebook"/></a>
-                        <a href="#" class=""><img src="./Images/Twitter - Negative.svg" alt="Twitter"/></a>
-                        <a href="#" class=""><img src="./Images/Instagram - Negative.svg" alt="Instagram"/></a>
-                        <a href="#" class=""><img src="./Images/LinkedIn - Negative.svg" alt="LinkedIn"/></a>
-                        <a href="#" class=""><img src="./Images/Github - Original.svg" alt="Github"/></a>  
+                        <a href="#" class=""><img src="../static/Images/Facebook - Negative.svg" alt="facebook"/></a>
+                        <a href="#" class=""><img src="../static/Images/Twitter - Negative.svg" alt="Twitter"/></a>
+                        <a href="#" class=""><img src="../static/Images/Instagram - Negative.svg" alt="Instagram"/></a>
+                        <a href="#" class=""><img src="../static/Images/LinkedIn - Negative.svg" alt="LinkedIn"/></a>
+                        <a href="#" class=""><img src="../static/Images/Github - Original.svg" alt="Github"/></a>  
                     </ul>
                     <p>© 2022,<b class="border">ANIMAX</b> <a href="#" class="border">Terms of Use</a> <a href="#">Privacy Policy</a></p>
 
@@ -173,21 +162,21 @@
                     <li><h6>Contact us</h6></li> 
                     <li>
                         <ul>
-                            <li><img src="./Images/Icon-MapPin.svg" alt="Our location"></li>
+                            <li><img src="../static/Images/Icon-MapPin.svg" alt="Our location"></li>
                             <li>Infomation technologies building,Victoria Island, Lagos, Nigeria.</li>
                         </ul>
                     </li>
 
                     <li>
                         <ul>
-                            <li><img src="./Images/Icon-Phone.svg" alt="Our mobile"></li>
+                            <li><img src="../static/Images/Icon-Phone.svg" alt="Our mobile"></li>
                             <li>+234 081-1234-5678</li>
                         </ul>
                     </li>
 
                     <li>
                         <ul>
-                            <li><img src="./Images/Icon-EnvelopeSimple.svg" alt="Our Email"></li>
+                            <li><img src="../static/Images/Icon-EnvelopeSimple.svg" alt="Our Email"></li>
                             <li>animax98@gmail.com</li>
                         </ul>
                     </li>
@@ -198,5 +187,4 @@
             
         </section>
     </footer>
-</body>
-</html>
+{% endblock %}

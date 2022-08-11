@@ -9,8 +9,11 @@ from django.contrib.auth.models import User
 
 
 def home(request):
-    return render(request, 'Animation_lib/home.html')
+    return render(request, 'Animation_lib/index.html')
 
+
+def about(request):
+    return render(request, 'Animation_lib/about.html')
 
 def signupform(request):
     if request.method == 'POST':

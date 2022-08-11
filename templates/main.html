@@ -11,6 +11,30 @@
 
     <link rel="stylesheet" href="{% static '../static/style/signin.css' %}" />
     <link rel="stylesheet" href="{% static '../static/style/signup.css' %}" />
+
+    <!-- from the about.html -->
+    <link rel="icon" type="image/svg" sizes="32x32" href="{% static '../static/images/Animax.svg' %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static '../static/style/about_us.css' %}">
+    <!-- ./images/Animax.svg -->
+
+    <!-- from landing_page (index.html) -->
+    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static '../static/style/index.css' %}" />
+    
+    <!-- <script src="app.js"></script> -->
+
+
+    <!-- from navbar.html -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/> -->
+    <link rel="stylesheet" href="{% static '../static/style/navbar.css' %}" />
+
     <title>AnimaX</title>
 </head>
 <body>
@@ -19,5 +43,7 @@
     {% block content %}
 
     {% endblock %}
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </body>
 </html>
