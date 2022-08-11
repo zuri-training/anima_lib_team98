@@ -73,7 +73,7 @@ You can find the Animax documentation on [here](https://github.com/zuri-training
 
 - Normal language: The name of the animations are very close to normal human language, and user do not need to write any code at all.
 
-- Ease of Styling: Animax.css contains a set of CSS selectors like `bounce-1x` and `move-up` that makes it easy to animate your HTML elements by passing the relevant ID or class.Easily export code for iOS (Swift), Web (HTML/CSS/JS) or SVG and watch your design comes to life.
+- Ease of Styling: Animax.css contains a set of CSS selectors like `bounce-1x` and `move-up` that makes it easy to animate your HTML elements by passing the relevant ID or class.Easily export code for Web (HTML/CSS/JS) or SVG and watch your design comes to life.
 - Light and user-friendly: The library was built using plain CSS, and no use of external libraries that might reduce your project's performance.
 - Production-ready animation library: Less coding, and more producing. Animax is an animation library that’s built for production. It support all major web browsers.
 
