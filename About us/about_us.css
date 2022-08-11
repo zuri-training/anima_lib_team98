@@ -51,7 +51,8 @@ header .nav-bar a {
 }
 
 header .nav-bar a:hover,
-header .nav-bar .current, #more a:hover{
+header .nav-bar .current, 
+#more a:hover{
     color: #FF8E3C;
     text-decoration: underline;
 }
@@ -164,8 +165,9 @@ h6 {
     margin-bottom: 56px;
 }
 .team {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
     margin-bottom: 110px;
 }
 
@@ -173,10 +175,20 @@ h6 {
     text-align: center;
 }
 
+.team-det h6{
+    margin-bottom: 1rem;
+}
+
 /* Check out more animation */
 #more{
     margin-top: 102px;
     margin-bottom: 82px;
+    display: flex;
+    justify-content: center;
+}
+
+#more img:hover{
+    margin-left: 8px;
 }
 
 #news {
