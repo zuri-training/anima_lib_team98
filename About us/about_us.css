@@ -5,6 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     text-decoration: none;
+    border: none;
 }
 
 body {
@@ -12,80 +13,80 @@ body {
     width: 100%;
     height: 100vh;
     font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: #170317;
 }
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-	line-height: 1.5;
-}
-
-/* Body */
 header {
     width: 100%;
-    height: 5.5rem;
-    padding: 15px 5px 15px 120px;
+    padding: 15px 80px 15px 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F1C0F2;
+    background-color: #7D1B7E;
+    border-bottom: 2px solid rgba(21, 5, 21, 0.2);
+    box-shadow: 0px 2px 4px rgba(21, 5, 21, 0.2);
     transition: all 0.5s linear;
 }
 
-
-header .nav-bar a {
-    color: #5E555E;
-    padding: 3px 18px;
+header .navbar a {
+    color: #F2F1F4;
+    padding: 3px 13px;
 }
 
-.border {
-    border-right: 1.5px solid #A6A6A6;
+.bd-r {
+    border-right: 1px solid #FDF7FD;
 }
 
-header .nav-bar a:hover,
-header .nav-bar .current, 
-#more a:hover{
-    color: #FF8E3C;
+header .navbar a:hover,
+header .navbar .active {
+    color: #FF8095;
     text-decoration: underline;
 }
 
-button {
-    height: 3rem;
-    background-color: #C231C4;
+header .sign-up {
+    background-color: inherit;
     padding: 8px 16px;
-    align-items: center;
-    border: 0;
-    color: white;
-    justify-content: center;
-    border-radius: 8px;
+    border-radius: 7px;
     cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid #C231C4;
 }
 
-header button span {
+header .sign-up span {
+    font-size: 16px;
+    color: #FDF7FD;
+}
+header .sign-up:hover{
+    transition: 0.8s;
+    background-color: #F1C0F2;
+}
+header .download {
+    background-color: #FF4D6A;
+    padding: 9px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+header .download:hover, .landing-btn:hover {
+    background-color: #FF1D6A;
+}
+header .download span {
     font-size: 16px;
     margin-left: 4px;
     padding-left: 8px;
     padding-right: 2px;
-    color: white;
-    border-left: 1px solid white;
+    color: #FCE8FC;
+    border-left: 1px solid #FCE8FC;
 }
+
 
 .main{
     padding: 0px 120px;
 }
-
-
 h1 {
-	font-weight: bold;
-	font-size: 4.5rem;
+	font-weight: 700;
+	font-size: 72px;
     min-height: 200px;
     background-color: #FAF5FA;
 	line-height: 1.1;
@@ -96,14 +97,22 @@ h1 {
 h1 span {
     color: #D542D7;
 }
-
+.main button {
+    background-color: #C231C4;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid #C231C4;
+    color: #FCE8FC;
+    font-size: 20px;
+}
 h2 {
     font-weight: 700;
     text-align: center;
     font-size: 3.75rem;
     line-height: 1.2;
 }
-
 h5 {
     font-size: 2rem;
     line-height: 1.2;
@@ -191,29 +200,103 @@ h6 {
     margin-left: 8px;
 }
 
-#news {
-    background: #F1C0F2;
-    min-height: 120px;
+/* Footer and Newsletter */
+.newsletter {
+    background-color: #F1C0F2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
 }
-
-#news form {
-    float: right;
+.newslet-content {
+    background-color: inherit;
+    width: 29%;
 }
-#news input[type="email"]{
-    padding: 4px;
-    height: 56px;
-    width: 515px;
-    border: 0;
-    border-radius: 8px;
+.newslet-content p:first-child {
+    font-size: 18px;
+    font-weight: 600;
 }
-
-footer{
+.newslet-content p:last-child {
+    color: #4A4656;
+    font-weight: 400;
+    font-size: 14px;
+}
+.newslet-form {
+    display: flex;
+    width: 50%;
+}
+.newslet-form input {
+    padding: 19px 10px;
+    background-color: #F2F2F2;
+    border: 1px solid #A29DAF;
+    border-radius: 8px 0px 0px 8px;
+    width: 70%;
+}
+.newslet-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #FF4D6A;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 20px;
+    color: #F2F2F2;;
+}
+footer {
     background-color: #7D1B7E;
+    padding: 50px;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #FCE8FC;
+    font-size: 16px;
+    font-weight: 400px;
 }
-.animax-footer .company-info {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin: 0;
-	padding: 0;
+footer h6 {
+    color: #FFB580;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+footer a {
+    color: #FCE8FC;
+}
+.footer-1 .logo {
+    margin: 26px 0;
+}
+.footer-1 p {
+    margin-top: 120px;
+}
+.footer-1 {
+    width: 40%;
+}
+.underline:hover, .underline:focus {
+    text-decoration: underline;
+}
+.footer-1 .ionicon {
+    fill: azure;
+    width: 25px;
+    margin-right: 28.5px;
+}
+.ionicon:hover {
+    fill: hsl(322, 100%, 66%);
+}
+.glow-button:hover {
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    transition-delay: 0s;
+}
+.footer-2, .footer-3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-content: flex-start;
+}
+.footer-2 a {
+    margin-bottom: 30px;
+}
+.footer-3 div {
+    margin-bottom: 30px;
+}
+.footer-3 img, .footer-3 svg {
+    margin-right: 15px;
 }
