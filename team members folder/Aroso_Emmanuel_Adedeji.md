@@ -12,7 +12,7 @@
 
 7) Deployed our static website to a server. I also applied the animation library I built on the  deployed website:  https://animax-static.herokuapp.com/
 
-8) Built the Animation Library using plain CSS, developed an Animation-User-Guide  for user and packaged with the library. Sample zipped library can be found here : https://drive.google.com/file/d/1sqA762gAnfwv8yknuH0Df_s9LKT-ZyLC/view?usp=sharing 
+8) Built the Animation Library using plain CSS, developed an Animation-User-Guide  for user and packaged with the library : https://github.com/zuri-training/anima_lib_team98/commit/b7634424bda93547deb50ae9f48add16aa6f0d71 
 
 9) I also assist the team as a Code Maintainer. : https://github.com/zuri-training/anima_lib_team98
 
