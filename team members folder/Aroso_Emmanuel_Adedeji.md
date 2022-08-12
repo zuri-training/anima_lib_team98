@@ -16,9 +16,8 @@
 
 9) I also assist the team as a Code Maintainer. : https://github.com/zuri-training/anima_lib_team98
 
- The below are what I am currently working on :
 
-10) Make the Landing page and Animation pages mobite and tablet responsive : https://github.com/zuri-training/anima_lib_team98/issues/107
+10) Make the Landing page and Animation pages mobile and tablet responsive : https://github.com/zuri-training/anima_lib_team98/issues/107
 
 11) Add the feature for auntheticated users to be able reset animation to default state while using the platform's animation interactive interface : https://github.com/zuri-training/anima_lib_team98/issues/106 
 
@@ -32,3 +31,11 @@ https://github.com/zuri-training/anima_lib_team98/issues/103
 15) Publish the library as a package that users can npm install as animax-css : https://github.com/zuri-training/anima_lib_team98/issues/108
 
 16) Configure the sever to be provided by Zuri, add our domain name and depoy our web application.
+
+17) Add animations to the Documentaion Page : https://github.com/zuri-training/anima_lib_team98/commit/233a0d564cefd80e5635fad95af97459a83cd407
+
+18) Develop the Download Library Page : https://github.com/zuri-training/anima_lib_team98/commit/3595ef32d4b8618437c5662a8586e9dea790e2d0 , https://github.com/zuri-training/anima_lib_team98/issues/110 , https://github.com/zuri-training/anima_lib_team98/commit/eb81f5227a46b003bd6adb56abe31537c11b9fb7
+
+19) Updated the About Us Page : https://github.com/zuri-training/anima_lib_team98/commit/2e1152089ec9b61672fac2124d38e5ce811dff5a
+
+20) Finalized the Landing Page with latest design from the designers : https://github.com/zuri-training/anima_lib_team98/commit/ced2fbd1b44da955f91309bc483dcbcbc90d011f
