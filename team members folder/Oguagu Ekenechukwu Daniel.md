@@ -23,7 +23,15 @@ https://github.com/zuri-training/anima_lib_team98/issues/100
 8. Convert the About page CSS into a Django activated static file
 https://github.com/zuri-training/anima_lib_team98/issues/101
 
-and
 
-9. I'm currently working on converting all the links to django templating order
+9. Convert all the links to django templating order
 https://github.com/zuri-training/anima_lib_team98/issues/102
+
+10. Make the website dynamic - deny authenticated User access to the login and signup page
+https://github.com/zuri-training/anima_lib_team98/issues/118
+
+11.  Convert the signin CSS into Django activated static file
+https://github.com/zuri-training/anima_lib_team98/issues/119
+
+12.  Convert the basic html signin page into a Django template
+https://github.com/zuri-training/anima_lib_team98/issues/120

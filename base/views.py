@@ -4,6 +4,7 @@ from .forms import Signup
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -12,10 +13,22 @@ def home(request):
     return render(request, 'Animation_lib/index.html')
 
 
+@login_required(login_url='signin')
 def about(request):
     return render(request, 'Animation_lib/about.html')
 
+
+@login_required(login_url='signin')
+def documentation(request):
+    return HttpResponse('Documentation Page not ready yet')
+
+@login_required(login_url='signin')
+def animation(request):
+    return HttpResponse('Animation Page not ready yet')
+
 def signupform(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     if request.method == 'POST':
         form = Signup(request.POST)
 
@@ -43,8 +56,10 @@ def signupform(request):
     context = {'form' : form}
     return render(request, 'Animation_lib/signup.html', context)
 
-# @login_required(login_url='signup')
+
 def signinform(request):
+    if request.user.is_authenticated:
+        return redirect('home')
     if request.method == 'POST':
         email = request.POST.get('email')
         password = request.POST.get('password')

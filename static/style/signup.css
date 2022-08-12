@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 @media screen and (max-width: 1440px) {
-  body {
+  .signup_body {
     font-family: Calibri;
     font-size: 15px;
     width: 99%;

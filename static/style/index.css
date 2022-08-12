@@ -8,7 +8,7 @@
     list-style: none;
 }
 
-body {
+.home_body {
     margin: auto;
     font-family: 'Open Sans';
     font-size: 18px;
@@ -17,6 +17,7 @@ body {
     background-color: #FAF5FA;
 }
 
+/* Navbar */
 header {
     width: 100%;
     padding: 15px 80px 15px 90px;
@@ -57,7 +58,10 @@ header .sign-up span {
     font-size: 16px;
     color: #FDF7FD;
 }
-
+header .sign-up:hover{
+    transition: 0.8s;
+    background-color: #F1C0F2;
+}
 header .download {
     background-color: #FF4D6A;
     padding: 9px 8px;
@@ -65,7 +69,9 @@ header .download {
     cursor: pointer;
     margin-left: 5px;
 }
-
+header .download:hover, .landing-btn:hover {
+    background-color: #FF1D6A;
+}
 header .download span {
     font-size: 16px;
     margin-left: 4px;
@@ -75,6 +81,7 @@ header .download span {
     border-left: 1px solid #FCE8FC;
 }
 
+/* Landing Page */
 main {
     padding: 0;
     width: 100%;
@@ -225,10 +232,10 @@ main {
 .animation-card {
     display: grid;
     grid-template-areas:
-        'a a c c'
-        'b b c c'
-        'd d e e'
-        'd d f f';
+        'd d c c'
+        'd d c c'
+        'b b e e'
+        'b b e e';
     gap: 50px;
     grid-template-rows: 250px 250px 250px 250px;
     padding: 0 90px 40px 90px;
@@ -257,20 +264,6 @@ main {
     background: transparent;
     cursor: pointer;
 }
-
-.animax-a {
-    grid-area: a;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #FF8095;
-    box-shadow: -14px 10px 6px rgba(61, 2, 62, 0.05);
-    background-color: #FEF9F5;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
 .animax-b {
     background-color: #FEF9F5;
     grid-area: b;
@@ -283,10 +276,17 @@ main {
     align-items: flex-start;
     justify-content: space-between;
 }
-
+.animax-b:hover {
+    box-shadow: -14px 10px 6px lightgrey;   
+}
+.animax-b:hover > div {
+    background-color: #7D1B7E;
+}
+.animax-b:hover > h5 {
+    color:#BD1D7E;
+}
 .animax-c {
     background-color: #FEF9F5;
-    ;
     grid-area: c;
     padding: 10px;
     border-radius: 8px;
@@ -297,7 +297,15 @@ main {
     align-items: flex-start;
     justify-content: space-between;
 }
-
+.animax-c:hover {
+    box-shadow: -14px 10px 6px lightgrey;   
+}
+.animax-c:hover > div {
+    background-color: #7D1B7E;
+}
+.animax-c:hover > h5 {
+    color: #BD1D7E;
+}
 .animax-d {
     background-color: #FEF9F5;
     grid-area: d;
@@ -310,10 +318,17 @@ main {
     align-items: flex-start;
     justify-content: space-between;
 }
-
+.animax-d:hover {
+    box-shadow: -14px 10px 6px lightgrey;   
+}
+.animax-d:hover > div {
+    background-color: #7D1B7E;
+}
+.animax-d:hover > h5 {
+    color:#BD1D7E;
+}
 .animax-e {
     background-color: #FEF9F5;
-    ;
     grid-area: e;
     padding: 10px;
     border-radius: 8px;
@@ -324,7 +339,15 @@ main {
     align-items: flex-start;
     justify-content: space-between;
 }
-
+.animax-e:hover {
+    box-shadow: -14px 10px 6px lightgrey;   
+}
+.animax-e:hover > div {
+    background-color: #7D1B7E;
+}
+.animax-e:hover > h5 {
+    color:#BD1D7E;
+}
 .center {
     align-self: center;
 }
@@ -333,15 +356,15 @@ main {
     align-self: flex-end;
 }
 
-.animax-f {
+.check-more {
     background-color: inherit;
-    grid-area: f;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-bottom: 50px;
 }
 
-.animax-f button {
+.check-more button {
     background-color: inherit;
     padding: 10px 16px;
     border-radius: 7px;
@@ -366,9 +389,10 @@ main {
     background-color: #E381E4;
 }
 
+
 /* Animations */
 #bounce {
-    animation: bounce 1s linear 10 paused;
+    animation: bounce 1s linear infinite paused;
 }
 
 @keyframes bounce {
@@ -394,4 +418,145 @@ main {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+#fade-in-out {
+    animation: fade_in_out linear 5s paused infinite 1s;
+}
+@keyframes fade_in_out {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#alternate-color {
+    animation: color_change 3s ease-in-out forwards infinite 1s paused;
+}
+@keyframes color_change {
+    0% {
+        background-color: red;
+    }
+    15% {
+        background-color: orange;
+    }
+    30% {
+        background-color: yellow;
+    }
+    45% {
+        background-color: green;
+    }
+    60% {
+        background-color: blue;
+    }
+    75% {
+        background-color: indigo;
+    }
+    100% {
+        background-color: violet;
+    }
+}
+
+/* Footer and Newsletter */
+.newsletter {
+    background-color: #F1C0F2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.newslet-content {
+    background-color: inherit;
+    width: 29%;
+}
+.newslet-content p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+.newslet-content p:last-child {
+    color: #4A4656;
+    font-weight: 400;
+    font-size: 14px;
+}
+.newslet-form {
+    display: flex;
+    width: 50%;
+}
+.newslet-form input {
+    padding: 19px 10px;
+    background-color: #F2F2F2;
+    border: 1px solid #A29DAF;
+    border-radius: 8px 0px 0px 8px;
+    width: 70%;
+}
+.newslet-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #FF4D6A;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 20px;
+    color: #F2F2F2;;
+}
+footer {
+    background-color: #7D1B7E;
+    padding: 50px;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #FCE8FC;
+    font-size: 16px;
+    font-weight: 400px;
+}
+footer h6 {
+    color: #FFB580;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+footer a {
+    color: #FCE8FC;
+}
+.footer-1 .logo {
+    margin: 26px 0;
+}
+.footer-1 p {
+    margin-top: 120px;
+}
+.footer-1 {
+    width: 40%;
+}
+.underline:hover, .underline:focus {
+    text-decoration: underline;
+}
+.footer-1 .ionicon {
+    fill: azure;
+    width: 25px;
+    margin-right: 28.5px;
+}
+.ionicon:hover {
+    fill: hsl(322, 100%, 66%);
+}
+.glow-button:hover {
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    transition-delay: 0s;
+}
+.footer-2, .footer-3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-content: flex-start;
+}
+.footer-2 a {
+    margin-bottom: 30px;
+}
+.footer-3 div {
+    margin-bottom: 30px;
+}
+.footer-3 img, .footer-3 svg {
+    margin-right: 15px;
 }
