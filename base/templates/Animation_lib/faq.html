@@ -1,57 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link href="doc_page.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link href="faq.css" rel="stylesheet" type="text/css" />
-    <title>FAQ</title>
-  </head>
+{% extends 'main.html' %}
 
-  <body>
-    <header>
+{% block content %}
+  <div class="faq_body">
+    <header class="faq_header">
       <a href="#" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" />
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" />
       </a>
       <nav class="navbar">
-        <a href="#" class="bd-r">Home</a>
-        <a href="Documentation.html" class="operative bd-r">Documentation</a>
-        <a href="Animations.html" class="bd-r" class="bd-r">Animations</a>
-        <a href="About.html">About</a>
+        <a href="{% url 'home' %}" class="bd-r">Home</a>
+        <a href="{% url 'doc_page1' %}" class="operative bd-r">Documentation</a>
+        <a href="{% url 'animation' %}" class="bd-r" class="bd-r">Animations</a>
+        <a href="{% url 'about' %}">About</a>
         <button class="sign-up">
-          <span>Sign Up</span>
+          <a href="{% url 'signup' %}"> Sign Up</a>
         </button>
         <button class="download">
-          <img src="assets/download-16.png" alt="download library" />
-          <span>Download</span>
+          <a href="../Animation_library/animax.zip" download class="my_link">
+            <img src="../static/assets/download-16.png" alt="download library" />
+            Download
+          </a>
         </button>
       </nav>
     </header>
     <div class="whole">
-      <h1>Frequently Asked Questions</h1>
+      <h1 class=".faq_h1">Frequently Asked Questions</h1>
 
       <button class="accordion" id="select">
         HOW DO I UPLOAD MY ANIMATION TO PUBLIC?
@@ -64,7 +36,7 @@
       </div>
 
       <button class="accordion">
-        HOW CAN I GIVE CREDIT TO THE ORIGINAL ANIMATION THAT I’VE EDITED AND
+        HOW CAN I GIVE CREDIT TO THE ORIGINAL ANIMATION THAT I HAVE EDITED AND
         UPLOADED TO ANIMAX?
       </button>
       <div class="panel">
@@ -104,7 +76,7 @@
       <button class="accordion">HOW MUCH DOES IT COST?</button>
       <div class="panel">
         <p>
-          It’s absolutely free, it cost nothing to have access to Animax, all
+          It is absolutely free, it cost nothing to have access to Animax, all
           you have to do is Log in/Sign up and you get whatever animations you
           want for free.
         </p>
@@ -155,7 +127,7 @@
     <footer>
       <div class="footer-1">
         <div class="logo">
-          <img src="assets/Logo.svg" alt="logo" />
+          <img src="../static/assets/Logo.svg" alt="logo" />
         </div>
         <a href="#">
           <svg
@@ -229,13 +201,13 @@
         <a href="doc_page2.html" class="underline">Installation</a>
         <a href="doc_page3.html" class="underline">Properties</a>
         <a href="doc_page4.html" class="underline">Usage Examples</a>
-        <a href="faq.html" class="underline">FAQs</a>
+        <a href="{% url 'faq' %}" class="underline">FAQs</a>
       </div>
       <div class="footer-3">
         <h6>Contact Us</h6>
         <div>
           <img
-            src="assets/icon-location.svg"
+            src="../static/assets/icon-location.svg"
             alt="Location Icon"
             width="13px"
             height="18px"
@@ -250,9 +222,7 @@
             <path
               d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z"
               fill="#FFF"
-              fill-rule="evenodd"
-            /></svg
-          ><a href="#" class="underline">+234 081-1234-5678</a>
+              fill-rule="evenodd"/></svg><a href="#" class="underline">+234 081-1234-5678</a>
         </div>
         <div>
           <svg width="20" height="16" xmlns="http://www.w3.org/2000/svg">
@@ -266,7 +236,7 @@
         </div>
       </div>
     </footer>
+  </div>
 
-    <script src="faq.js"></script>
-  </body>
-</html>
+{% endblock %}
+

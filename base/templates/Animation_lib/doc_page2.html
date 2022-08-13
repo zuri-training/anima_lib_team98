@@ -1,58 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link href="doc_page.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-     src="https://kit.fontawesome.com/882fb8e114.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Documentation</title>
-  </head>
+{% extends 'main.html' %}
 
-  <body>
+{% block content %}
+  <div class="doc_body">
     <header>
       <a href="#" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" />
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" />
       </a>
       <nav class="navbar">
-        <a href="#" class="bd-r">Home</a>
-        <a href="Documentation.html" class="operative bd-r">Documentation</a>
-        <a href="Animations.html" class="bd-r" class="bd-r">Animations</a>
-        <a href="About.html">About</a>
+        <a href="{% url 'home' %}" class="bd-r">Home</a>
+        <a href="{% url 'doc_page1' %}" class="operative bd-r">Documentation</a>
+        <a href="{% url 'animation' %}" class="bd-r" class="bd-r">Animations</a>
+        <a href="{% url 'about' %}">About</a>
         <button class="sign-up">
           <span>Sign Up</span>
         </button>
+        {% if request.user.is_authenticated %}
         <button class="download">
-          <img src="assets/download-16.png" alt="download library" />
-          <span>Download</span>
+          <a href="../Animation_library/animax.zip" download class="my_link">
+            <img src="../static/assets/download-16.png" alt="download library" />
+            Download
+          </a>
         </button>
+        {% endif %}
       </nav>
     </header>
     <div class="whole">
       <div class="content">
         <div class="left">
-          <a href="doc_page.html">
+          <a href="{% url 'doc_page1' %}">
             <button class="accordion">Introduction</button>
           </a>
           <div class="panel">
@@ -82,7 +57,7 @@
             </div>
           </div>
 
-          <a href="doc_page3.html">
+          <a href="{% url 'doc_page3' %}">
             <button class="accordion">Properties</button>
           </a>
           <div class="panel">
@@ -101,7 +76,7 @@
             </div>
           </div>
 
-          <a href="doc_page4.html">
+          <a href="{% url 'doc_page4' %}">
             <button class="accordion">Usage Examples</button>
           </a>
           <div class="panel">
@@ -124,7 +99,7 @@
         </div>
 
         <div class="right">
-          <strong>Docs > <a href="doc_page2.html">Installation</a></strong>
+          <strong>Docs > <a href="{% url 'doc_page2' %}">Installation</a></strong>
           <h1 id="installation">Installation</h1>
           <p>
             This page introduces you to what the requirements for using 
@@ -242,7 +217,7 @@
       </p>
       <div class="submit">
         <button id="previous" type="submit">
-          <a href="doc_page.html">
+          <a href="{% url 'doc_page1' %}">
           <div class="up"><img class="previous" src="previous.svg">Previous</div>
           <br>
           <div class="down">Introduction</div>
@@ -250,7 +225,7 @@
         </button>
         
         <button id="next" type="submit">
-          <a href="doc_page3.html">
+          <a href="{% url 'doc_page3' %}">
           <div class="up">Next<img class="next" src="next.svg"></div>
           <br>
           <div class="down">Properties</div>
@@ -271,7 +246,7 @@
     <footer>
       <div class="footer-1">
         <div class="logo">
-          <img src="assets/Logo.svg" alt="logo" />
+          <img src="../static/assets/Logo.svg" alt="logo" />
         </div>
         <a href="#">
           <svg
@@ -341,17 +316,17 @@
       </div>
       <div class="footer-2">
         <h6>Documentation</h6>
-        <a href="doc_page.html" class="underline">Introduction</a>
-        <a href="doc_page2.html" class="underline">Installation</a>
-        <a href="doc_page3.html" class="underline">Properties</a>
-        <a href="doc_page4.html" class="underline">Usage Examples</a>
-        <a href="faq.html" class="underline">FAQs</a>
+        <a href="{% url 'doc_page1' %}" class="underline">Introduction</a>
+        <a href="{% url 'doc_page2' %}" class="underline">Installation</a>
+        <a href="{% url 'doc_page3' %}"class="underline">Properties</a>
+        <a href="{% url 'doc_page4' %}"class="underline">Usage Examples</a>
+        <a href="{% url 'faq' %}" class="underline">FAQs</a>
       </div>
       <div class="footer-3">
         <h6>Contact Us</h6>
         <div>
           <img
-            src="assets/icon-location.svg"
+            src="../static/assets/icon-location.svg"
             alt="Location Icon"
             width="13px"
             height="18px"
@@ -382,6 +357,5 @@
         </div>
       </div>
     </footer>
-    <script src="doc_page.js"></script>
-  </body>
-</html>
+  </div>
+{% endblock %}

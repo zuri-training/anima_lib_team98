@@ -12,19 +12,34 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'Animation_lib/index.html')
 
+def doc_page1(request):
+    return render(request, 'Animation_lib/doc_page.html')
+
+def doc_page2(request):
+    return render(request, 'Animation_lib/doc_page2.html')
+
+def doc_page3(request):
+    return render(request, 'Animation_lib/doc_page3.html')
+
+def doc_page4(request):
+    return render(request, 'Animation_lib/doc_page4.html')
+
 
 @login_required(login_url='signin')
 def about(request):
     return render(request, 'Animation_lib/about.html')
 
 
-@login_required(login_url='signin')
-def documentation(request):
-    return HttpResponse('Documentation Page not ready yet')
+# @login_required(login_url='signin')
+# def documentation(request):
+#     return HttpResponse('Documentation Page not ready yet')
 
 @login_required(login_url='signin')
 def animation(request):
     return HttpResponse('Animation Page not ready yet')
+
+def faq(request):
+    return render(request, 'Animation_lib/faq.html')
 
 def signupform(request):
     if request.user.is_authenticated:

@@ -17,6 +17,12 @@
     background-color: #FAF5FA;
 }
 
+.my_link {
+    text-decoration: none;
+    outline : none;
+    color : white
+}
+
 /* Navbar */
 header {
     width: 100%;

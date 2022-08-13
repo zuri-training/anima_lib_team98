@@ -6,7 +6,7 @@
   margin: none;
 }
 @media only screen and (max-width: 1440px) {
-  body {
+  .doc_body {
     font-family: "Open Sans";
   }
   header {

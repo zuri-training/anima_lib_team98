@@ -4,10 +4,10 @@
   text-decoration: none;
 }
 @media only screen and (max-width: 1440px) {
-  body {
+  .faq_body {
     font-family: "Open Sans";
   }
-  header {
+  .faq_header {
     font-family: "Open Sans";
     font-size: 18px;
     font-weight: 400;
@@ -22,7 +22,7 @@
     box-shadow: 0px 2px 4px rgba(21, 5, 21, 0.2);
     transition: all 0.5s linear;
   }
-  header .navbar a {
+  .faq_header .navbar a {
     color: #f2f1f4;
     padding: 3px 13px;
   }
@@ -30,13 +30,13 @@
     border-right: 1px solid #fdf7fd;
   }
 
-  header .navbar a:hover,
-  header .navbar .operative {
+  .faq_header .navbar a:hover,
+  .faq_header .navbar .operative {
     color: #ff8095;
     text-decoration: underline;
   }
 
-  header .sign-up {
+  .faq_header .sign-up {
     background-color: inherit;
     padding: 8px 16px;
     border-radius: 7px;
@@ -45,12 +45,12 @@
     border: 1px solid #c231c4;
   }
 
-  header .sign-up span {
+  .faq_header .sign-up span {
     font-size: 16px;
     color: #fdf7fd;
   }
 
-  header .download {
+  .faq_header .download {
     background-color: #ff4d6a;
     padding: 9px 8px;
     border-radius: 7px;
@@ -58,7 +58,7 @@
     margin-left: 5px;
   }
 
-  header .download span {
+  .faq_header .download span {
     font-size: 16px;
     margin-left: 4px;
     padding-left: 8px;
@@ -74,16 +74,16 @@
     font-weight: 400;
     font-size: 15px;
   }
-  h1 {
+  .faq_h1 {
     margin: 5%;
     text-align: center;
     justify-content: center;
   }
-  h3 {
+  .faq_h3 {
     text-align: center;
     justify-content: center;
   }
-  h3 a {
+  .faq_h3 a {
     text-decoration: none;
     color: #c231c4;
   }

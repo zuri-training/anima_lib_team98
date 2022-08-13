@@ -1,58 +1,37 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link href="doc_page.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-     src="https://kit.fontawesome.com/882fb8e114.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Documentation</title>
-  </head>
+{% extends 'main.html' %}
 
-  <body>
+{% block content %}
+  <div class="doc_body">
     <header>
       <a href="#" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" />
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" />
       </a>
       <nav class="navbar">
-        <a href="#" class="bd-r">Home</a>
-        <a href="Documentation.html" class="operative bd-r">Documentation</a>
-        <a href="Animations.html" class="bd-r" class="bd-r">Animations</a>
-        <a href="About.html">About</a>
+        <a href="{% url 'home' %}" class="bd-r">Home</a>
+        <a href="{% url 'doc_page1' %}" class="operative bd-r">Documentation</a>
+        <a href="{% url 'animation' %}" class="bd-r" class="bd-r">Animations</a>
+        <a href="{% url 'about' %}">About</a>
         <button class="sign-up">
-          <span>Sign Up</span>
+          <a href="{% url 'signup' %}">Sign Up></a>
         </button>
+
+        {% if request.user.is_authenticated %}
         <button class="download">
-          <img src="assets/download-16.png" alt="download library" />
-          <span>Download</span>
+          <a href="../Animation_library/animax.zip" download class="my_link">
+            <img src="../static/assets/download-16.png" alt="download library" />
+            Download
+          </a>
         </button>
+        {% endif %}
+        
       </nav>
     </header>
     <div class="whole">
       <div class="content">
         <div class="left">
-          <button class="accordion" id="select">Introduction</button>
+          <a href="{% url 'doc_page1' %}">
+            <button class="accordion">Introduction</button>
+          </a>
           <div class="panel">
             <div class="submenu">
               <p><a href="doc_page.html#animax">What is Animax?</a></p>
@@ -70,6 +49,7 @@
           <a href="doc_page2.html">
             <button class="accordion">Installation</button>
           </a>
+
           <div class="panel">
             <div class="submenu">
               <p><a href="doc_page2.html#installation">Installation</a></p>
@@ -82,28 +62,25 @@
             </div>
           </div>
 
-          <a href="doc_page3.html">
+          <a href="{% url 'doc_page3' %}">
             <button class="accordion">Properties</button>
           </a>
           <div class="panel">
             <div class="submenu">
               <p><a href="doc_page3.html#properties">Properties</a></p>
-              <p><a href="doc_page3.html#alternate">Alternate Colours</a></p>
-              <p><a href="doc_page3.html#blink">Blink</a></p>
               <p><a href="doc_page3.html#bounce">Bounce</a></p>
-              <p><a href="doc_page3.html#cloud">Cloud</a></p>
+              <p><a href="doc_page3.html#blink">Blink</a></p>
               <p><a href="doc_page3.html#fade">Fade</a></p>
-              <p><a href="doc_page3.html#move">Move</a></p>
+              <p><a href="doc_page3.html#alternate">Alternate Colours</a></p>
+              <p><a href="doc_page3.html#stretch">Stretch</a></p>
+              <p><a href="doc_page3.html#cloud">Cloud</a></p>
               <p><a href="doc_page3.html#pulse">Pulse</a></p>
               <p><a href="doc_page3.html#rotate">Rotate</a></p>
-              <p><a href="doc_page3.html#stretch">Stretch</a></p>
               <p><a href="doc_page3.html#sm3">Something Missing?</a></p>
             </div>
           </div>
 
-          <a href="doc_page4.html">
-            <button class="accordion">Usage Examples</button>
-          </a>
+          <button class="accordion" id="select">Usage Examples</button>
           <div class="panel">
             <div class="submenu">
               <p><a href="doc_page4.html#usage">Usage Examples</a></p>
@@ -121,93 +98,99 @@
               <p><a href="doc_page4.html#sm4">Something Missing?</a></p>
             </div>
           </div>
+
+          <a href="doc_page5.html">
+            <button class="accordion">Customization</button>
+          </a>
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page5.html#customization">Customization</a></p>
+              <p><a href="doc_page5.html#default">Default Options</a></p>
+              <p><a href="doc_page5.html#custom">Custom Options</a></p>
+              <p><a href="doc_page5.html#sm5">Something Missing?</a></p>
+            </div>
           </div>
         </div>
 
         <div class="right">
-          <strong>Docs > <a href="doc_page.html">Introduction</a></strong>
-          <h1 id="animax">What is Animax?</h1>
-          <p>
-            Animax is a simple animation librarythat allows users perform web
-            animation writing little to no code to achieve that.
-          </p>
+          <strong>Docs > <a href="{% url 'doc_page4' %}">Usage Examples</a></strong>
+          <h1 id="usage">Usage Examples</h1>
+          <p>Simple examples for animating your components.</p>
 
-          <h2 id="getting_started">Getting Started</h2>
-          <p>
-            Animating your project with self written code is quite stressful and
-            time consuming but not to worry, ANIMAX offers you world class tool
-            that stands up to the most rigorous implementation
-          </p>
+          <h2 id="animating">Animating a Component</h2>
+          <div class="copy_code">
+            <button type="button" id="copy_code_button">
+              <span class="material-icons">content_copy</span>
+            </button>
+            <pre>
+              <code id="copy_code_text">
+                &ltlink rel="stylesheet" type="text/css" href="animax.css"/link&gt
+                &ltdiv&gt id="bounce-natural" class="cube"&gt &lt/div&gt  
+              </code>
+            </pre>
+          </div>
           <video src="#">Video</video>
 
-          <h2 id="features">Features</h2>
+          <h2 id="bounce-h">Bounce</h2>
           <p>
-            <b><img class="pin" src="pin.svg" />Normal Language:</b>
-            The names of the animation are very close to normal human language
-            and users do not need to write any code at all.
+            A component that can be made to bounce like a ball, it has the
+            options to bounce or slide and bounce.
           </p>
-          <p>
-            <b><img class="pin" src="pin.svg" />Easy to Use:</b>
-            The library navigation is clear and flows. It gives you control on
-            how you want the animation to look like
-          </p>
-          <p>
-            <b><img class="pin" src="pin.svg" />Light and user-friendly:</b>
-            It is built on pure CSS and doesnt take much load time hence content
-            loads a lot faster.
-          </p>
+          <div id="bounce-natural" class="circle"></div>
 
-          <h2 id="comparison">Comparison with Other Libraries</h2>
+          <h2 id="blink-h">Blink</h2>
           <p>
-            Across multiple Animation libraries, Animax has a unique forcus on
-            animation libraries and how it can be easily used by developers.
+            Animax provides a blink animation that can be modified to be blink
+            and fade, blink red, blink blue and blink green.
           </p>
-          <p>
-            We have checked out other animation libraries and would like to
-            offer insights to help you hopefully navigate through the choices
-            you have.
-          </p>
-          <h3>GSAP</h3>
-          <p>
-            <a href="">GreenSock</a> is an Opensouce tool that works around countless browser
-            inconsistencies and features the ScrollTrigger, SplitText,
-            ScrollSmoother and ScrollMagic animation
-          </p>
-          <p>
-            With their strength lying in timeline classes for synchronising
-            animations, ability to stop reverse or yoyo animation, animating
-            along Bezier curves, observer for normalizing event detection across
-            browsers.
-          </p>
-          <p>
-            One thing which Animax does well is correct syncing of the keyframes
-            regardless of the value entered. Some of the features of Animax was
-            inspired by the best things about GSAP and it’s a great alternative.
-          </p>
-          <h3>Anime.js</h3>
-          <p>
-            <a href="">Anime.js</a>  is another popular animation library that works with CSS
-            properties, SVG, DOM attributes and Javascript objects featuring
-            layered CSS transform, controls and callbacks
-          </p>
-          <p>
-            It has built-in straggering system that makes complex follow through
-            and overlapping animations. So if you need simple overlapping
-            animations, you can check it out.
-          </p>
-          <h3>Animate.css</h3>
-          <p>
-            <a href="">Animate.css</a> is another very popular animation libraries which is
-            great for emphasis, homepages and sliders. It features cross-browser
-            animations, bounce and zoom effect, copy & paste.
-          </p>
-          <p>
-            It has many similarities with Animax- both being able to set delay
-            and speed and also bounce effects. However there is no feasible way
-            to troubleshoot problems users might have.
-          </p>
+          <div id="blink" class="circle"></div>
 
-          <h2 id="sm1">Something Missing?</h2>
+          <h2 id="fade-h">Fade</h2>
+          <p>
+            Fade allows elements to blend out of view with the options to Fade
+            In, Fade Out, FadeInOut and Persist.
+          </p>
+          <div id="fade-in-out" class="circle"></div>
+
+          <h2 id="alternate-h">Alternate Colours</h2>
+          <p>
+            Altenate colour changes the colour of the object with the option to
+            alternate an object colour or a text colour.
+          </p>
+          <div id="alternate-colour" class="circle"></div>
+
+          <h2 id="stretch-h">Stretch</h2>
+          <p>
+            An object or component is stretched to a particular length as it is
+            in the viewport with option to stretch wide, stretch high or squash
+            and stretch.
+          </p>
+          <div id="stretch-wide" class="cube"></div>
+
+          <h2 id="cloud-h">Cloud</h2>
+          <p>
+            The objects becomes more blurry and the only option available is big
+            cloud.
+          </p>
+          <div id="big-cloud" class="cube"></div>
+
+          <h2 id="pulse-h">Pulse</h2>
+          <p>
+            The object is given a pulsating effect that changes its shape and
+            opacity. The heartbeat and pulse in is available.
+          </p>
+          <div id="heartbeat" class="circle"></div>
+
+          <h2 id="rotate-h">Rotate</h2>
+          <p>The object rotates with a preset speed at various angles and directions.</p>
+          <div id="spin" class="cube"></div>
+
+          <h2 id="move-h">Move</h2>
+          <p>This causes your object to move linearly in all four directions. The object translates at preset 
+            distances of 50% to 100% from the object’s initial position.</p>
+          <div id="move-right" class="cube"></div>
+
+          <h2 id="sm4">Something Missing?</h2>
           <p>
             If you find issues with the library or have suggestions on how to
             improve the library or the project in general, please
@@ -230,11 +213,13 @@
 				<span id="5"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
       </p>
       <div class="submit">
-        <button id="next1" type="submit">
-          <a href="doc_page2.html">
-            <div class="up">Next<img class="next" src="next.svg" /></div>
+        <button id="previous" type="submit">
+          <a href="{% url 'doc_page3' %}">
+            <div class="up">
+              <img class="previous" src="previous.svg" />Previous
+            </div>
             <br />
-            <div class="down">Installation</div>
+            <div class="down">Properties</div>
           </a>
         </button>
       </div>
@@ -252,7 +237,7 @@
     <footer>
       <div class="footer-1">
         <div class="logo">
-          <img src="assets/Logo.svg" alt="logo" />
+          <img src="../static/assets/Logo.svg" alt="logo" />
         </div>
         <a href="#">
           <svg
@@ -322,17 +307,17 @@
       </div>
       <div class="footer-2">
         <h6>Documentation</h6>
-        <a href="doc_page.html" class="underline">Introduction</a>
-        <a href="doc_page2.html" class="underline">Installation</a>
-        <a href="doc_page3.html" class="underline">Properties</a>
-        <a href="doc_page4.html" class="underline">Usage Examples</a>
-        <a href="faq.html" class="underline">FAQs</a>
+        <a href="{% url 'doc_page1' %}" class="underline">Introduction</a>
+        <a href="{% url 'doc_page2' %}" class="underline">Installation</a>
+        <a href="{% url 'doc_page3' %}" class="underline">Properties</a>
+        <a href="{% url 'doc_page4' %}" class="underline">Usage Examples</a>
+        <a href="{% url 'faq' %}" class="underline">FAQs</a>
       </div>
       <div class="footer-3">
         <h6>Contact Us</h6>
         <div>
           <img
-            src="assets/icon-location.svg"
+            src="../static/assets/icon-location.svg"
             alt="Location Icon"
             width="13px"
             height="18px"
@@ -363,6 +348,5 @@
         </div>
       </div>
     </footer>
-    <script src="doc_page.js"></script>
-  </body>
-</html>
+  </div>
+{% endblock %}

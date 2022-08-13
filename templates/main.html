@@ -16,9 +16,19 @@
     <link rel="icon" type="image/svg" sizes="32x32" href="../static/images/Animax.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../static/style/index.css" />
     <link rel="stylesheet" href="{% static '../static/style/about_us.css' %}">
+
+    <!-- from FAQ page -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"/>
+    <link href="{% static '../static/style/faq.css' %}"  rel="stylesheet" type="text/css" />
+
+    <!-- from doc_page.html -->
+    <link href="{% static '../static/style/doc_page.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+    
 
     <!-- sign up html -->
     <link rel="stylesheet" href="{% static '../static/style/signup.css' %}" />
@@ -35,6 +45,9 @@
 
     {% endblock %}
     <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/faq.js' %}"></script>
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://kit.fontawesome.com/882fb8e114.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/doc_page.js' %}"></script>
 </body>
 </html>

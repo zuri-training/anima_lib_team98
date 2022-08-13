@@ -8,16 +8,21 @@
       </a>
       <nav class="navbar">
         <a href="{% url 'home' %}" class="active bd-r">Home</a>
-        <a href="{% url 'documentation' %}" class="bd-r">Documentation</a>
+        <a href="{% url 'doc_page1' %}" class="bd-r">Documentation</a>
         <a href="{% url 'animation' %}" class="bd-r" class="bd-r">Animations</a>
         <a href="{% url 'about' %}">About</a>
         <button class="sign-up">
-          <a href="{% url 'signup' %}">Sign Up></a>
+          <a  href="{% url 'signup' %}">Sign Up></a>
         </button>
-        <button class="download">
-          <img src="../static/assets/download-16.png" alt="download library" />
-          <span>Download</span>
+
+        {% if request.user.is_authenticated %}
+        <button class="download"> 
+          <a href="../Animation_library/animax.zip" download class="my_link">
+            <img src="../static/assets/download-16.png" alt="download library" />
+            Download
+          </a>
         </button>
+        {% endif %}
       </nav>
     </header>
     <main>
@@ -28,9 +33,14 @@
             Animating with code can be intimidating at first, but don't worry,
             Animax was designed to make it simple and intuitive.
           </p>
+          {% if request.user.is_authenticated %}
           <button class="landing-btn">
-            <span>Download Library</span>
+            <a href="../Animation_library/animax.zip" download class="my_link">
+              <img src="../static/assets/download-16.png" alt="download library" />
+              Download Library
+            </a>
           </button>
+          {% endif %}
         </div>
         <div class="landing-image">
           <img
@@ -237,7 +247,7 @@
         <a href="#" class="underline">Installation</a>
         <a href="#" class="underline">Properties</a>
         <a href="#" class="underline">Usage Examples</a>
-        <a href="#" class="underline">FAQs</a>
+        <a href="{% url 'faq' %}" class="underline">FAQs</a>
       </div>
       <div class="footer-3">
         <h6>Contact Us</h6>
