@@ -1,0 +1,348 @@
+{% extends 'main.html' %}
+
+{% block content %}
+  <div class="doc_body">
+    <header>
+      <a href="#" class="logo">
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" />
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'home' %}" class="bd-r">Home</a>
+        <a href="{% url 'doc_page1' %}" class="operative bd-r">Documentation</a>
+        <a href="{% url 'animation' %}" class="bd-r" class="bd-r">Animations</a>
+        <a href="{% url 'about' %}">About</a>
+        <button class="sign-up">
+          <a href="{% url 'signup' %}">Sign Up></a>
+        </button>
+
+        {% if request.user.is_authenticated %}
+        <button class="download">
+          <a href="https://res.cloudinary.com/desomm/raw/upload/v1660556715/animax/files/animax_lqdkdg.zip" download class="my_link">
+            <img src="../static/assets/download-16.png" alt="download library" />
+            Download
+          </a>
+        </button>
+        {% endif %}
+        
+      </nav>
+    </header>
+    <div class="whole">
+      <div class="content">
+        <div class="left">
+          <a href="{% url 'doc_page1' %}">
+            <button class="accordion">Introduction</button>
+          </a>
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page.html#animax">What is Animax?</a></p>
+              <p><a href="doc_page.html#getting_started">Getting Started</a></p>
+              <p><a href="doc_page.html#features">Features</a></p>
+              <p>
+                <a href="doc_page.html#comparison"
+                  >Comparison with Other Libraries</a
+                >
+              </p>
+              <p><a href="doc_page.html#sm1">Something Missing?</a></p>
+            </div>
+          </div>
+
+          <a href="doc_page2.html">
+            <button class="accordion">Installation</button>
+          </a>
+
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page2.html#installation">Installation</a></p>
+              <p><a href="doc_page2.html#requirement">Requirements</a></p>
+              <p><a href="doc_page2.html#importing">Importing Animax</a></p>
+              <p>
+                <a href="doc_page2.html#contributing">Contributing to Animax</a>
+              </p>
+              <p><a href="doc_page2.html#sm2">Something Missing?</a></p>
+            </div>
+          </div>
+
+          <a href="{% url 'doc_page3' %}">
+            <button class="accordion">Properties</button>
+          </a>
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page3.html#properties">Properties</a></p>
+              <p><a href="doc_page3.html#bounce">Bounce</a></p>
+              <p><a href="doc_page3.html#blink">Blink</a></p>
+              <p><a href="doc_page3.html#fade">Fade</a></p>
+              <p><a href="doc_page3.html#alternate">Alternate Colours</a></p>
+              <p><a href="doc_page3.html#stretch">Stretch</a></p>
+              <p><a href="doc_page3.html#cloud">Cloud</a></p>
+              <p><a href="doc_page3.html#pulse">Pulse</a></p>
+              <p><a href="doc_page3.html#rotate">Rotate</a></p>
+              <p><a href="doc_page3.html#sm3">Something Missing?</a></p>
+            </div>
+          </div>
+
+          <button class="accordion" id="select">Usage Examples</button>
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page4.html#usage">Usage Examples</a></p>
+              <p>
+                <a href="doc_page4.html#animating">Animating a Component</a>
+              </p>
+              <p><a href="doc_page4.html#bounce">Bounce</a></p>
+              <p><a href="doc_page4.html#blink">Blink</a></p>
+              <p><a href="doc_page4.html#fade">Fade</a></p>
+              <p><a href="doc_page4.html#alternate">Alternate Colours</a></p>
+              <p><a href="doc_page4.html#stretch">Stretch</a></p>
+              <p><a href="doc_page4.html#cloud">Cloud</a></p>
+              <p><a href="doc_page4.html#pulse">Pulse</a></p>
+              <p><a href="doc_page4.html#rotate">Rotate</a></p>
+              <p><a href="doc_page4.html#sm4">Something Missing?</a></p>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="submenu">
+              <p><a href="doc_page5.html#default">Default Options</a></p>
+              <p><a href="doc_page5.html#custom">Custom Options</a></p>
+              <p><a href="doc_page5.html#sm5">Something Missing?</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <strong>Docs > <a href="{% url 'doc_page4' %}">Usage Examples</a></strong>
+          <h1 id="usage">Usage Examples</h1>
+          <p>Simple examples for animating your components.</p>
+
+          <h2 id="animating">Animating a Component</h2>
+          <div class="copy_code">
+            <button type="button" id="copy_code_button">
+              <span class="material-icons">content_copy</span>
+            </button>
+            <pre>
+              <code id="copy_code_text">
+                &ltlink rel="stylesheet" type="text/css" href="animax.css"/link&gt
+                &ltdiv&gt id="bounce-natural" class="cube"&gt &lt/div&gt  
+              </code>
+            </pre>
+          </div>
+          <video src="#">Video</video>
+
+          <h2 id="bounce-h">Bounce</h2>
+          <p>
+            A component that can be made to bounce like a ball, it has the
+            options to bounce or slide and bounce.
+          </p>
+          <div id="bounce-natural" class="circle"></div>
+
+          <h2 id="blink-h">Blink</h2>
+          <p>
+            Animax provides a blink animation that can be modified to be blink
+            and fade, blink red, blink blue and blink green.
+          </p>
+          <div id="blink" class="circle"></div>
+
+          <h2 id="fade-h">Fade</h2>
+          <p>
+            Fade allows elements to blend out of view with the options to Fade
+            In, Fade Out, FadeInOut and Persist.
+          </p>
+          <div id="fade-in-out" class="circle"></div>
+
+          <h2 id="alternate-h">Alternate Colours</h2>
+          <p>
+            Altenate colour changes the colour of the object with the option to
+            alternate an object colour or a text colour.
+          </p>
+          <div id="alternate-colour" class="circle"></div>
+
+          <h2 id="stretch-h">Stretch</h2>
+          <p>
+            An object or component is stretched to a particular length as it is
+            in the viewport with option to stretch wide, stretch high or squash
+            and stretch.
+          </p>
+          <div id="stretch-wide" class="cube"></div>
+
+          <h2 id="cloud-h">Cloud</h2>
+          <p>
+            The objects becomes more blurry and the only option available is big
+            cloud.
+          </p>
+          <div id="big-cloud" class="cube"></div>
+
+          <h2 id="pulse-h">Pulse</h2>
+          <p>
+            The object is given a pulsating effect that changes its shape and
+            opacity. The heartbeat and pulse in is available.
+          </p>
+          <div id="heartbeat" class="circle"></div>
+
+          <h2 id="rotate-h">Rotate</h2>
+          <p>The object rotates with a preset speed at various angles and directions.</p>
+          <div id="spin" class="cube"></div>
+
+          <h2 id="move-h">Move</h2>
+          <p>This causes your object to move linearly in all four directions. The object translates at preset 
+            distances of 50% to 100% from the object’s initial position.</p>
+          <div id="move-right" class="cube"></div>
+
+          <h2 id="sm4">Something Missing?</h2>
+          <p>
+            If you find issues with the library or have suggestions on how to
+            improve the library or the project in general, please
+            <a class="something" href="#">file an issue</a> for us or
+            <a class="something" href="#">fill in the feedback form.</a>
+          </p>
+          <p>
+            If you have an idea for a new feature, please
+            <a class="something" href="#">raise an issue</a> to discuss it
+            before sending code. In many cases features are absent for a reason.
+          </p>
+        </div>
+      </div>
+      <p id="rating">
+        How helpful was this page? Leave a rating 
+        <span id="1"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)" ></span>
+				<span id="2"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+				<span id="3"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+				<span id="4"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+				<span id="5"  class="fa fa-star" onmouseover="startRating(this)" startRating="starmark(this)"></span>
+      </p>
+      <div class="submit">
+        <button id="previous" type="submit">
+          <a href="{% url 'doc_page3' %}">
+            <div class="up">
+              <img class="previous" src="previous.svg" />Previous
+            </div>
+            <br />
+            <div class="down">Properties</div>
+          </a>
+        </button>
+      </div>
+    </div>
+    <div class="newsletter">
+        <div class="newslet-content">
+            <p>Subscribe to our NEWSLETTER</p>
+            <p>to get updates delivered to your inbox</p>
+        </div>
+        <form action="" method="POST" id="newslet-form" class="newslet-form">
+            <input type="email" name="email" id="email" required placeholder="Enter Email">
+            <button type="submit" form="newslet-form" value="Submit">Subscribe</button>
+        </form>
+    </div>
+    <footer>
+      <div class="footer-1">
+        <div class="logo">
+          <img src="../static/assets/Logo.svg" alt="logo" />
+        </div>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Logo Facebook</title>
+            <path
+              d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </a>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Logo Twitter</title>
+            <path
+              d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+            />
+          </svg>
+        </a>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Logo Linkedin</title>
+            <path
+              d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"
+            />
+          </svg>
+        </a>
+        <a href="#">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Logo Instagram</title>
+            <path
+              d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"
+            />
+            <path
+              d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"
+            />
+          </svg>
+        </a>
+        <a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Logo Github</title>
+            <path
+              d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"
+            />
+          </svg>
+        </a>
+        <p>&copy; 2022, Animax</p>
+      </div>
+      <div class="footer-2">
+        <h6>Documentation</h6>
+        <a href="{% url 'doc_page1' %}" class="underline">Introduction</a>
+        <a href="{% url 'doc_page2' %}" class="underline">Installation</a>
+        <a href="{% url 'doc_page3' %}" class="underline">Properties</a>
+        <a href="{% url 'doc_page4' %}" class="underline">Usage Examples</a>
+        <a href="{% url 'faq' %}" class="underline">FAQs</a>
+      </div>
+      <div class="footer-3">
+        <h6>Contact Us</h6>
+        <div>
+          <img
+            src="../static/assets/icon-location.svg"
+            alt="Location Icon"
+            width="13px"
+            height="18px"
+          />
+          <a href="#" class="underline"
+            >Infomation technologies building, Victoria Island, Lagos,
+            Nigeria.</a
+          >
+        </div>
+        <div>
+          <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg><a href="#" class="underline">+234 081-1234-5678</a>
+        </div>
+        <div>
+          <svg width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z"
+              fill="#FFF"
+              fill-rule="evenodd"
+            />
+          </svg>
+          <a href="#" class="underline">animax98@gmail.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+{% endblock %}

@@ -1,0 +1,302 @@
+/* Global properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+}
+
+.about_body {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    font-family: "Open Sans", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #170317;
+}
+header {
+    width: 100%;
+    padding: 15px 80px 15px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7D1B7E;
+    border-bottom: 2px solid rgba(21, 5, 21, 0.2);
+    box-shadow: 0px 2px 4px rgba(21, 5, 21, 0.2);
+    transition: all 0.5s linear;
+}
+
+header .navbar a {
+    color: #F2F1F4;
+    padding: 3px 13px;
+}
+
+.bd-r {
+    border-right: 1px solid #FDF7FD;
+}
+
+header .navbar a:hover,
+header .navbar .active {
+    color: #FF8095;
+    text-decoration: underline;
+}
+
+header .sign-up {
+    background-color: inherit;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid #C231C4;
+}
+
+header .sign-up span {
+    font-size: 16px;
+    color: #FDF7FD;
+}
+header .sign-up:hover{
+    transition: 0.8s;
+    background-color: #F1C0F2;
+}
+header .download {
+    background-color: #FF4D6A;
+    padding: 9px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+header .download:hover, .landing-btn:hover {
+    background-color: #FF1D6A;
+}
+header .download span {
+    font-size: 16px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 2px;
+    color: #FCE8FC;
+    border-left: 1px solid #FCE8FC;
+}
+
+
+.main{
+    padding: 0px 120px;
+}
+h1 {
+	font-weight: 700;
+	font-size: 72px;
+    min-height: 200px;
+    background-color: #FAF5FA;
+	line-height: 1.1;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+    margin-bottom: 2rem;
+}
+h1 span {
+    color: #D542D7;
+}
+.main button {
+    background-color: #C231C4;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid #C231C4;
+    color: #FCE8FC;
+    font-size: 20px;
+}
+h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 3.75rem;
+    line-height: 1.2;
+}
+h5 {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+#hero {
+    margin-top: 56px;
+    margin-bottom: 110px;
+}
+
+#hero p {
+    margin-bottom: 48px;
+    text-align: left;
+    max-width: 1216px;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+#about-animax{
+    text-align: center;
+}
+
+#our-mission {
+    background-color: #FAF5FA;
+    padding: 32px 120px;
+    margin-bottom: 110px;
+}
+
+/* Values container */
+#container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.values {
+    max-width: 380px;
+    border: 1.5px solid;
+    padding: 1rem;
+}
+
+.values p {
+    margin-top: 1rem;
+}
+
+/* Our team */
+#team {
+    margin-bottom: 56px;
+}
+.team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 110px;
+}
+
+.team-det, #more {
+    text-align: center;
+}
+
+.team-det h6{
+    margin-bottom: 1rem;
+}
+
+/* Check out more animation */
+#more{
+    margin-top: 102px;
+    margin-bottom: 82px;
+    display: flex;
+    justify-content: center;
+}
+
+#more img:hover{
+    margin-left: 8px;
+}
+
+/* Footer and Newsletter */
+.newsletter {
+    background-color: #F1C0F2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+.newslet-content {
+    background-color: inherit;
+    width: 29%;
+}
+.newslet-content p:first-child {
+    font-size: 18px;
+    font-weight: 600;
+}
+.newslet-content p:last-child {
+    color: #4A4656;
+    font-weight: 400;
+    font-size: 14px;
+}
+.newslet-form {
+    display: flex;
+    width: 50%;
+}
+.newslet-form input {
+    padding: 19px 10px;
+    background-color: #F2F2F2;
+    border: 1px solid #A29DAF;
+    border-radius: 8px 0px 0px 8px;
+    width: 70%;
+}
+.newslet-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #FF4D6A;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 20px;
+    color: #F2F2F2;;
+}
+footer {
+    background-color: #7D1B7E;
+    padding: 50px;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #FCE8FC;
+    font-size: 16px;
+    font-weight: 400px;
+}
+footer h6 {
+    color: #FFB580;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+footer a {
+    color: #FCE8FC;
+}
+.footer-1 .logo {
+    margin: 26px 0;
+}
+.footer-1 p {
+    margin-top: 120px;
+}
+.footer-1 {
+    width: 40%;
+}
+.underline:hover, .underline:focus {
+    text-decoration: underline;
+}
+.footer-1 .ionicon {
+    fill: azure;
+    width: 25px;
+    margin-right: 28.5px;
+}
+.ionicon:hover {
+    fill: hsl(322, 100%, 66%);
+}
+.glow-button:hover {
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    transition-delay: 0s;
+}
+.footer-2, .footer-3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-content: flex-start;
+}
+.footer-2 a {
+    margin-bottom: 30px;
+}
+.footer-3 div {
+    margin-bottom: 30px;
+}
+.footer-3 img, .footer-3 svg {
+    margin-right: 15px;
+}

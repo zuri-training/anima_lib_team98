@@ -1,0 +1,499 @@
+/* This file contains CSS animations developed during I4GxZuri Project Phase 2022*/
+/* Team 098 - Project Anima_Lib (Animax)*/
+
+
+/* Alternate Colour */
+
+#alternate-colour {
+    animation: color_change 2s ease-in-out forwards infinite 1s;
+}
+@keyframes color_change {
+    0% {
+        background-color: red;
+    }
+    15% {
+        background-color: orange;
+    }
+    30% {
+        background-color: yellow;
+    }
+    45% {
+        background-color: green;
+    }
+    60% {
+        background-color: blue;
+    }
+    75% {
+        background-color: indigo;
+    }
+    100% {
+        background-color: violet;
+    }
+}
+
+#alternate-text-colour {
+    animation: text_color_change 2s ease-in-out 1s;
+}
+@keyframes text_color_change {
+    0% {
+        color: red;
+    }
+    15% {
+        color: orange;
+    }
+    30% {
+        color: yellow;
+    }
+    45% {
+        color: green;
+    }
+    60% {
+        color: blue;
+    }
+    75% {
+        color: indigo;
+    }
+    100% {
+        color: violet;
+    }
+}
+#siren {
+    animation: linear infnite;
+}
+
+/* Blink */
+
+#blink {
+    animation: blink 1s linear infinite;;
+}
+
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+#blink-red {
+    animation: blink_red normal 1.5s infinite ease-in-out;
+}
+@keyframes blink_red {
+    0% {
+        background-color: rgba(255, 0, 0, 1);
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 1);
+    }
+}
+#blink-blue {
+    animation: blink_blue normal 1.5s infinite ease-in-out;
+}
+@keyframes blink_blue {
+    0% {
+        background-color: rgba(0, 0, 255, 1);
+    }
+    50% {
+        background-color: rgba(0, 0, 255, 0.5);
+    }
+    100% {
+        background-color: rgba(0, 0, 255, 1);
+    }
+}
+#blink-green {
+    animation: blink_green normal 1.5s infinite ease-in-out;
+}
+@keyframes blink_green {
+    0% {
+        background-color: rgba(0, 255, 0, 1);
+    }
+    50% {
+        background-color: rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(0, 255, 0, 1);
+    }
+}
+#blink-text-red {
+    animation: blink_text_red normal 1.5s infinite ease-in-out;
+}
+@keyframes blink_text_red {
+    0% {
+        color: rgba(255, 0, 0, 1);
+    }
+    50% {
+        color: rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        color: rgba(255, 0, 0, 1);
+    }
+}
+#blink-and-fade {
+    animation: blink_fade 2s infinite both;
+}
+@keyframes blink_fade {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Bounce */
+#bounce-natural {
+    animation: bouncing 2s ease infinite;
+}
+@keyframes bouncing {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100%); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7%); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+}
+#bounce-1x {
+    animation: bounce 1s linear infinite;
+    position: relative;
+}
+#bounce-2x {
+    animation: bounce 0.8s linear infinite;
+}
+#bounce-3x {
+    animation: bounce 0.6s linear infinite;
+}
+#bounce-4x {
+    animation: bounce 0.4s linear infinite;
+}
+#bounce-5x {
+    animation: bounce 0.2s linear infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50%);
+    }
+}
+
+/* Cloud */
+
+@keyframes cloud {
+    0% {
+        transform: translate3d(50%, 40%, 0);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(50%, 50%, 0);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(50%, 40%, 0);
+    }
+}
+#bigcloud {
+    animation: cloud 2s infinite;
+}
+
+/* Fade */
+
+#fade-in {
+    animation: fade_in linear 3s;
+}
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#fade-out {
+    animation: fade_out linear 3s;
+}
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#fade-out-persist {
+    animation: fade_out_retain linear 3s forwards;
+}
+@keyframes fade_out_retain {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+#fade-in-out {
+    animation: fade_in_out linear 5s;
+}
+@keyframes fade_in_out {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Move */
+
+#move-up {
+    animation: move_up 1 linear 2s;
+}
+@keyframes move_up {
+    0% { transform: translateY(0); }
+    
+    50% { transform: translateY(-50%);  } 
+  
+    100% {  transform: translateY(-100%); }
+}
+#move-down {
+    animation: move_down 1 2s linear;
+}
+@keyframes move_down {
+    0% { transform: translateY(0); }
+    
+    50% { transform: translateY(50%);  } 
+  
+    100% {  transform: translateY(100%); }
+}
+#move-left {
+    animation: move_left 1 linear 2s;
+}
+@keyframes move_left {
+    0% { transform: translateX(0); }
+    
+    50% { transform: translateX(-50%);  } 
+  
+    100% {  transform: translateX(-100%); }
+}
+#move-right {
+    animation: move_right 1 linear 2s;
+}
+@keyframes move_right {
+    0% { transform: translateX(0); }
+    
+    50% { transform: translateX(50%);  } 
+  
+    100% {  transform: translateX(100%); }
+}
+
+/* Pulse */
+
+/* Pulse an element's opacity */
+#pulse {
+    animation-name: pulse 2s linear infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.3;
+    }
+  
+    10% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+}
+#pulse-in {
+    animation-name: pulse-in 0.5s infinite;
+}
+@keyframes pulse-in {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+#heartbeat {
+    animation: heartbeat 1 linear infinite;
+}
+@keyframes heartbeat {
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+    10% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+    20% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    30% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+    40% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.05);
+    }
+    60% {
+        transform: rotate(-45deg) scale(0.95);
+    }
+    70% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
+/* Rotate */
+
+#spin {
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#reverse-spin {
+    animation: reverse_spin 1s infinite linear;
+}
+
+@keyframes reverse_spin {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+}
+#rotate-45-return {
+    animation: rotate_return linear 2.5s;
+}
+
+@keyframes rotate_return {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+#rotate-45-r {
+    transform: rotate(45deg);
+}
+
+#rotate-45-l {
+    transform: rotate(-45deg);
+}
+
+#rotate-90-r {
+    transform: rotate(90deg);
+}
+
+#rotate-90-l {
+    transform: rotate(-90deg);
+}
+
+#rotate-180-r {
+    transform: rotate(180deg);
+}
+
+#rotate-180-l {
+    transform: rotate(-180deg);
+}
+
+#rotate-move-r {
+    transform: rotate(180deg) translateX(100%);
+}
+
+#move-rotate-r {
+    transform: translateX(100%) rotate(90deg);
+}
+
+/* Stretch */
+
+#stretch-wide {
+    animation: width_change 3s ease-in 0s infinite forwards;
+}
+
+@keyframes width_change {
+    25% {
+        transform: scale(1.5, 1);
+    }
+
+    100% {
+        transform: scale(3, 1);
+    }
+}
+#stretch-high {
+    animation: height_change 3s ease-in 0s infinite forwards;
+}
+@keyframes height_change {
+    25% {
+        transform: scale(1, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 3);
+    }
+}
+#squash-and-stretch {
+    animation: squash_stretch 1.4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes squash_stretch {
+    0% {
+		-webkit-transform: translateY(-30%);
+		        transform: translateY(-30%);
+	}
+	
+	10% { 
+		transform: scale(0.4, 1.2);
+	}
+	
+	50% { 
+		transform: scale(1.2, 0.4);
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+        -webkit-transform: translateY(50%);
+		        transform: translateY(50%);
+		
+	}
+	70% { 
+		transform: scale(1, 1.7);
+	}
+}

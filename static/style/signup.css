@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1440px) {
+  .signup_body {
+    font-family: Calibri;
+    font-size: 15px;
+    width: 99%;
+    height: 100%;
+  }
+  h1 {
+    margin: 10px;
+    padding: 30px;
+    color: white;
+    background-color: #7d1b7e;
+  }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .label {
+    margin-left: 20%;
+  }
+  input {
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 60%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+  }
+  fieldset {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(240, 233, 233);
+    margin-top: 20px;
+    margin-left: 30%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    background-color: #ef18f3;
+    color: white;
+    border: white;
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .signin {
+    text-align: center;
+    margin-top: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: #7d1b7e;
+  }
+  .or:before {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: black;
+  }
+  .or {
+    position: relative;
+    max-width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .or:after {
+    content: " ";
+    display: block;
+    height: 1px;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: black;
+  }
+  .icons {
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-google {
+    background: conic-gradient(
+        from -45deg,
+        #ea4335 110deg,
+        #4285f4 90deg 180deg,
+        #34a853 180deg 270deg,
+        #fbbc05 270deg
+      )
+      73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    margin-left: 35%;
+  }
+  .fa-apple {
+    margin-left: 5%;
+  }
+  .agreement {
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(112, 110, 110);
+    margin-bottom: 10px;
+  }
+  #terms,
+  #privacy {
+    text-decoration: none;
+    color: rgb(112, 110, 110);
+  }
+}

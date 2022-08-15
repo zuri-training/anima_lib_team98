@@ -1,15 +1,13 @@
-<link rel="stylesheet" type="text/css" media="all" href="style.css" />
-
 <h1 align="center">
-    <a class="anim-pulse" href="https://animax.com"><img src="https://raw.githubusercontent.com/emarc99/Huddle-Landing-Page/main/images/animax.js.jpeg" width="175px" alt="< animax.js >"></a>
+    <a class="anim-pulse" href="https://animax-static.herokuapp.com/"><img src="./Logo.svg" width="175px" alt="animax logo"></a>
 </h1>
 
-<h1 align="center">Zuri Team 098
+<h1 align="center">Create Engaging Experience with Speed ⚡️
 </h1>
 
 ---
 
-<p align="center">Built with the sole purpose of making life easier for beginner web developers.
+<p align="center">Animax provides a set of modules that makes it super easy for developers to create web animations.
 </p>
 
 <p align="center">
@@ -28,72 +26,62 @@
 
 ## Table of Contents
 
-
 - [Table of Contents](#table-of-contents)
-- [Technologies Used](#technologies-used)
+- [Technologies](#technologies)
 - [Resources/Links](#resourceslinks)
 - [Introduction](#introduction)
   - [Getting Started](#getting-started)
   - [Features](#features)
-  - [Animations](#animations)
 - [Usage Examples](#usage-examples)
-- [Interactive Animations](#interactive-animations)
 - [Development](#development)
-- [Contributing](#contributing)
+- [Active Members](#active-members)
 - [Sponsors](#sponsors)
 - [License](#license)
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- Python (Django)
-- MySQL
+## Technologies
+
+<p align="center">
+   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="html" />
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="css" />
+  <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" alt="JS" />
+</p>
+
+<p align="center">
+ <img src="https://img.shields.io/badge/django-%23092E20.svg?&style=for-the-badge&logo=django&logoColor=white" />
+ <img src="https://img.shields.io/badge/mysql-%234479A1.svg?&style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white" />
+</p>
 
 ## Resources/Links
- - [Animax Web Application](animax-js-css.com)
- - [Figma](https://www.figma.com/file/mnP49B5GDsVrVBPIp1Q6g0/Animax-Project-Design?node-id=604%3A980)
- - [Database Schema](https://figma.com)
+ - [Animax Web Application](https://animax-static.herokuapp.com/)
+ - [Figma Design](https://www.figma.com/file/mnP49B5GDsVrVBPIp1Q6g0/Animax-Project-Design?node-id=604%3A980)
+ - [Database Schema](https://drive.google.com/drive/folders/1AKcQyHlicydAK1Kbe46BMMVrXzMu52FB?usp=sharing)
  - [First Presentation](https://drive.google.com/file/d/1RhV8apcyZNm-udaeVtNrwc2EhNOslGLj/view?usp=sharing)
- - [Second Presentation](https://figma.com)
- - [Meetings' Minutes](docs.google.com)
  - [List of Accomplished Tasks](https://docs.google.com/spreadsheets/d/1hxQbE1XdJ99-JEQI5cQ6hj8YUqHRTQ0KgzNLgOPfWa8/edit#gid=1652708415)
 
 ## Introduction
 
-Animax is a simple animation library that allows users to perform basic web animation using little to no code.
+Animax is a library of ready-to-use, cross-browser animations for use in your web projects. Suitable for emphasis, home pages, sliders, attention-guiding hints, and simply spicing up your products.
 
 ### Getting Started
 
-Velit sapien, venenatis arcu ut quam. Risus pellentesque mauris, etiam at vitae nibh. Vulputate vulputate consequat venenatis eleifend eu sagittis ut pretium non.
+Stepping the into world of web animations might seem scary and intimidating at first, but don't worry, we've got you. Our platform was designed and engineered to make the experience a pleasant and intuitive one.
 
-Go through the [DOCUMENTATION.md](https://github.com/zuri-training/anima_lib_team98/blob/develop/DOCUMENTATION.md) for the full animax library documentation.
+You can find the Animax documentation on [here](https://github.com/zuri-training/anima_lib_team98/blob/develop/DOCUMENTATION.md).
 
-### Features
+### Features 
 
 - Normal language: The name of the animations are very close to normal human language, and user do not need to write any code at all.
 
-- Easy-to-use: Just apply the ID (i.e. the CSS selector) of the animation you want.
-
-- Light and user-friendly: The library was built using plain CSS, and no use of external libraries.
-
-### Animations
-
-At this time, the library has the following animations:
-- Alternate colors
-- Blink
-- Bounce
-- Fade
-- Move
-- Pulse
-- Rotate
-- Stretch
+- Ease of Styling: Animax.css contains a set of CSS selectors like `bounce-1x` and `move-up` that makes it easy to animate your HTML elements by passing the relevant ID or class.Easily export code for Web (HTML/CSS/JS) or SVG and watch your design comes to life.
+- Light and user-friendly: The library was built using plain CSS, and no use of external libraries that might reduce your project's performance.
+- Production-ready animation library: Less coding, and more producing. Animax is an animation library that’s built for production. It support all major web browsers.
 
 ## Usage Examples
 
 1. Download the library.
 2. Extract the zipped file.
-3. Import the library into your project using the <code>link</code> tag. 
+3. Import the library into your project using the `link` tag. 
    
    ```html
    <html>
@@ -113,7 +101,7 @@ At this time, the library has the following animations:
    </html>
    ```
 
-4. Add the animation ID, which is <code>bounce-1x"</code> in this instance, to the HTML element you would like to animate.
+4. Add the animation ID, which is `bounce-1x` in this instance, to the HTML element you would like to animate.
    ```html
    <body>
    
@@ -128,24 +116,14 @@ At this time, the library has the following animations:
    ```
 
 5. Voila, the element is automatically animated.
-   
-   <div class="animation-row">
-    <div id="bounce-1x" class="circle"></div>
-   </div>
+
+<p align="center"><img src="Ellipse88.svg" alt="bouncing ball"></p>
         
-        
-
-## Interactive Animations
-
-JavaScript Web Animations API is used to create the experience for users to generate their preferred code combinations. This feature is made for users that want more granularity and control over their animations. This solution is implemented with plain JavaScript (no external libraries) so as to provide the best performance and a good starting point for developers to learn about creating interactive animation.
- - Minimum Requirement: Understand the basics of JS and programming in general. Knowledge of JS WAAPI is not required.
- - Reasons:  No need to rely on DOM-heavy manipulation techniques.
-
 ## Development
 
-See [DEVELOP.md](https://github.com/zuri-training/anima_lib_team98/blob/develop/DEVELOPMENT.md) for development docs.
+See [DEVELOPMENT.md](https://github.com/zuri-training/anima_lib_team98/blob/develop/DEVELOPMENT.md) for development docs.
 
-## Contributing
+## Active Members
 
 
 |      Designers     |     Developers    | 
@@ -162,7 +140,7 @@ See [DEVELOP.md](https://github.com/zuri-training/anima_lib_team98/blob/develop/
 | Joshua Opeyemi Adebisi |  
 | Salau Shukurat |  
 
-## Sponsors
+## Sponsors 
 
 Animax project would neither have been realized nor be the success that it is today without our sponsors' kind support. These organizations currently support animax:
 

@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
+body {
+    margin: auto;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 400;
+    color: #170317;
+    background-color: #FAF5FA;
+}
+header {
+    width: 100%;
+    padding: 15px 80px 15px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7D1B7E;
+    border-bottom: 2px solid rgba(21, 5, 21, 0.2);
+    box-shadow: 0px 2px 4px rgba(21, 5, 21, 0.2);
+    transition: all 0.5s linear;
+}
+
+header .navbar a {
+    color: #F2F1F4;
+    padding: 3px 13px;
+}
+
+.bd-r {
+    border-right: 1px solid #FDF7FD;
+}
+
+header .navbar a:hover,
+header .navbar .active {
+    color: #FF8095;
+    text-decoration: underline;
+}
+
+header .sign-up {
+    background-color: inherit;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 1px solid #C231C4;
+}
+
+header .sign-up span {
+    font-size: 16px;
+    color: #FDF7FD;
+}
+
+header .download {
+    background-color: #FF4D6A;
+    padding: 9px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+header .download span {
+    font-size: 16px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 2px;
+    color: #FCE8FC;
+    border-left: 1px solid #FCE8FC;
+}
