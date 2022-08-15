@@ -2,26 +2,25 @@
 
 
 {% block content %}
-  <div class="animation_body">
-    <header>
-      <a href="index.html" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" height="auto" />
-      </a>
-      <nav class="navbar">
-        <a href="index.html" class="bd-r">Home</a>
-        <a href="Documentation.html" class="bd-r">Documentation</a>
-        <a href="#" class="active bd-r" class="bd-r">Animations</a>
-        <a href="About.html" class="bd-r">About</a>
-        <button>
-          <img src="assets/download-16.png" alt="download library" />
-          <span>Download</span>
-        </button>
-        <a href="">Jane Doe</a>
-      </nav>
-    </header>
+<header>
+  <a  href="{% url 'home' %}" class="logo">
+    <img src="../static/../static/assets/Logo.svg" alt="logo" width="179px" height="auto" />
+  </a>
+  <nav class="navbar">
+    <a  href="{% url 'home' %}" class="bd-r">Home</a>
+    <a  href="{% url 'doc_page1' %}" class="bd-r">Documentation</a>
+    <a href="#" class="active bd-r" class="bd-r">Animations</a>
+    <a  href="{% url 'about' %}" class="bd-r">About</a>
+    <button>
+      <img src="../static/../static/assets/download-16.png" alt="download library" />
+      <span>Download</span>
+    </button>
+    <a href="">Jane Doe</a>
+  </nav>
+</header>
     <main>
       <div class="animation-intro">
-        <a class="animation-prev" href="animation-move.html"
+        <a class="animation-prev" href="{% url 'anim-move' %}"
           ><svg
             width="33"
             height="33"
@@ -49,7 +48,7 @@
           <p>ROTATE</p>
           <p>Rotates content in all directions</p>
         </div>
-        <a class="animation-right" href="animation-stretch.html"
+        <a class="animation-right" href="{% url 'anim-move' %}"
           ><svg
             width="33"
             height="33"
@@ -75,12 +74,12 @@
         </a>
       </div>
       <div class="animation-nav-bar">
-        <a class="animation-switch" href="animation-rotate.html">spin</a>
-        <a class="animation-switch" href="animation-rotate-2.html"
+        <a class="animation-switch" href="{% url 'anim-rotate' %}">spin</a>
+        <a class="animation-switch" href="{% url 'anim-rotate_two' %}"
           >reverse spin</a
         >
-        <a class="animation-switch" href="animation-rotate-3.html">rotate 45 and return</a>
-        <a class="animation-switch" href="animation-rotate-4.html"
+        <a class="animation-switch" href="{% url 'anim-rotate3' %}">rotate 45 and return</a>
+        <a class="animation-switch" href="{% url 'anim-rotate4' %}"
           >move right then rotate 90</a
         >
         <a class="animation-switch active" href="#"
@@ -89,11 +88,11 @@
       </div>
       <div class="animation-main">
         <div class="developer-actions">
-          <a href="#"><img width="25px" src="assets/Repeat.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="../static/assets/Repeat.svg" alt="" /></a>
           <a href="#"
-            ><img width="25px" src="assets/CodeSimple.svg" alt=""
+            ><img width="25px" src="../static/assets/CodeSimple.svg" alt=""
           /></a>
-          <a href="#"><img width="25px" src="assets/Heart.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="../static/assets/Heart.svg" alt="" /></a>
         </div>
         <div class="animation-container">
           <form class="animation-options" action="" method="">

@@ -4,16 +4,16 @@
 {% block content %}
   <div class="animation_body">
     <header>
-      <a href="index.html" class="logo">
-        <img src="assets/Logo.svg" alt="logo" width="179px" height="auto" />
+      <a  href="{% url 'home' %}" class="logo">
+        <img src="../static/assets/Logo.svg" alt="logo" width="179px" height="auto" />
       </a>
       <nav class="navbar">
-        <a href="index.html" class="bd-r">Home</a>
-        <a href="Documentation.html" class="bd-r">Documentation</a>
+        <a  href="{% url 'home' %}" class="bd-r">Home</a>
+        <a  href="{% url 'doc_page1' %}" class="bd-r">Documentation</a>
         <a href="#" class="active bd-r" class="bd-r">Animations</a>
-        <a href="About.html" class="bd-r">About</a>
+        <a  href="{% url 'about' %}" class="bd-r">About</a>
         <button>
-          <img src="assets/download-16.png" alt="download library" />
+          <img src="../static/assets/download-16.png" alt="download library" />
           <span>Download</span>
         </button>
         <a href="">Jane Doe</a>
@@ -21,7 +21,7 @@
     </header>
     <main>
       <div class="animation-intro">
-        <a class="animation-prev" href="animation-fade.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="animation-prev" href="{% url 'anim-fade' %}"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M27.5 16.5H5.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M14.5 7.5L5.5 16.5L14.5 25.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -30,23 +30,23 @@
             <p>MOVE</p>
         <p>Moves content in all directions</p>
           </div>
-        <a class="animation-right" href="animation-rotate.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="animation-right" href="{% url 'anim-rotate' %}"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.5 16.5H27.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M18.5 25.5L27.5 16.5L18.5 7.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           </a>
       </div>
       <div class="animation-nav-bar">
-        <a class="animation-switch" href="animation-move.html">move up</a>
+        <a class="animation-switch" href="{% url 'anim-move' %}">move up</a>
         <a class="animation-switch active" href="#">move down</a>
-        <a class="animation-switch" href="animation-move-3.html">move left</a>
-        <a class="animation-switch" href="animation-move-4.html">move right</a>
+        <a class="animation-switch" href="{% url 'anim-move' %}">move left</a>
+        <a class="animation-switch" href="{% url 'anim-move' %}">move right</a>
       </div>
       <div class="animation-main">
         <div class="developer-actions">
-          <a href="#"><img width="25px" src="assets/Repeat.svg" alt="" /></a>
-          <a href="#"><img width="25px" src="assets/CodeSimple.svg" alt="" /></a>
-          <a href="#"><img width="25px" src="assets/Heart.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="../static/assets/Repeat.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="../static/assets/CodeSimple.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="../static/assets/Heart.svg" alt="" /></a>
         </div>
         <div class="animation-container">
           <form class="animation-options" action="" method="">

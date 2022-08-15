@@ -35,6 +35,6 @@ urlpatterns = [
     path('anim-fade3/', views.animation_fade3, name='anim-fade3'),
     path('anim-fade4/', views.animation_fade4, name='anim-fade4'),
     path('anim-fade_two/', views.animation_fade_two, name='anim-fade_two'),
-    # path('anim-bounce/', views.animation.bounce, name='anim-bounce'),
+    path('anim-bounce/', views.animation_bounce, name='anim-bounce'),
     path('anim-bounce_two/', views.animation_bounce, name='anim-bounce_two')
 ]

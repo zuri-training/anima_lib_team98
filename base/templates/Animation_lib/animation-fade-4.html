@@ -21,7 +21,7 @@
     </header>
     <main>
       <div class="animation-intro">
-        <a class="animation-prev" href="animation-pulse.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="animation-prev" href="{% url 'anim-pulse' %}"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M27.5 16.5H5.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M14.5 7.5L5.5 16.5L14.5 25.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -30,16 +30,16 @@
             <p>FADE</p>
         <p>Fades the content</p>
           </div>
-        <a class="animation-right" href="animation-move.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="animation-right" href="{% url 'anim-move' %}"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.5 16.5H27.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M18.5 25.5L27.5 16.5L18.5 7.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           </a>
       </div>
       <div class="animation-nav-bar">
-        <a class="animation-switch active" href="animation-fade.html">fade in</a>
-        <a class="animation-switch" href="animation-fade-2.html">fade out</a>
-        <a class="animation-switch" href="animation-fade-3.html">fade in out</a>
+        <a class="animation-switch active" href="{% url 'anim-fade' %}">fade in</a>
+        <a class="animation-switch" href="{% url 'anim-fade_two' %}">fade out</a>
+        <a class="animation-switch" href="{% url 'anim-fade3' %}">fade in out</a>
         <a class="animation-switch active" href="#">fade out persist</a>
       </div>
       <div class="animation-main">
