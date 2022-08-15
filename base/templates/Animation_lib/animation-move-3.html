@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Animation Page</title>
-    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="animax.css" />
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  </head>
+{% extends 'main.html' %}
 
-  <body>
+
+{% block content %}
+  <div class="animation_body">
     <header>
       <a href="index.html" class="logo">
         <img src="assets/Logo.svg" alt="logo" width="179px" height="auto" />
@@ -34,78 +21,31 @@
     </header>
     <main>
       <div class="animation-intro">
-        <a class="animation-prev" href="animation-move.html"
-          ><svg
-            width="33"
-            height="33"
-            viewBox="0 0 33 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M27.5 16.5H5.5"
-              stroke="#4A4656"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M14.5 7.5L5.5 16.5L14.5 25.5"
-              stroke="#4A4656"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <a class="animation-prev" href="animation-fade.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.5 16.5H5.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14.5 7.5L5.5 16.5L14.5 25.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </a>
-        <div class="animation-intro-content">
-          <p>ROTATE</p>
-          <p>Rotates content in all directions</p>
-        </div>
-        <a class="animation-right" href="animation-stretch.html"
-          ><svg
-            width="33"
-            height="33"
-            viewBox="0 0 33 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.5 16.5H27.5"
-              stroke="#4A4656"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M18.5 25.5L27.5 16.5L18.5 7.5"
-              stroke="#4A4656"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+          </a>
+          <div class="animation-intro-content">
+            <p>MOVE</p>
+        <p>Moves content in all directions</p>
+          </div>
+        <a class="animation-right" href="animation-rotate.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 16.5H27.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.5 25.5L27.5 16.5L18.5 7.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </a>
+          </a>
       </div>
       <div class="animation-nav-bar">
-        <a class="animation-switch" href="animation-rotate.html">spin</a>
-        <a class="animation-switch" href="animation-rotate-2.html"
-          >reverse spin</a
-        >
-        <a class="animation-switch active" href="#">rotate 45 and return</a>
-        <a class="animation-switch" href="animation-rotate-4.html"
-          >move right then rotate 90</a
-        >
-        <a class="animation-switch" href="animation-rotate-5.html"
-          >rotate 180 then move right</a
-        >
+        <a class="animation-switch active" href="#">move up</a>
+        <a class="animation-switch" href="animation-move-2.html">move down</a>
+        <a class="animation-switch" href="animation-move-3.html">move left out</a>
+        <a class="animation-switch" href="animation-move-4.html">move right</a>
       </div>
       <div class="animation-main">
         <div class="developer-actions">
           <a href="#"><img width="25px" src="assets/Repeat.svg" alt="" /></a>
-          <a href="#"
-            ><img width="25px" src="assets/CodeSimple.svg" alt=""
-          /></a>
+          <a href="#"><img width="25px" src="assets/CodeSimple.svg" alt="" /></a>
           <a href="#"><img width="25px" src="assets/Heart.svg" alt="" /></a>
         </div>
         <div class="animation-container">
@@ -164,7 +104,9 @@
                   <option value="normal" selected>Normal</option>
                   <option value="reverse">Reverse</option>
                   <option value="alternate">Alternate</option>
-                  <option value="alternate-reverse">Alternate-Reverse</option>
+                  <option value="alternate-reverse">
+                    Alternate-Reverse
+                  </option>
                 </select>
               </div>
             </div>
@@ -203,13 +145,13 @@
               <option value="ease-out">Ease-out</option>
               <option value="ease-in-out">Ease-in-out</option>
             </select>
-            <!-- Rotate Animation Options End -->
+            <!-- Move Animation Options End -->
           </form>
-          <div id="rotate-45-return" class="animation-object-1"></div>
+          <div id="move-left" class="animation-object"></div>
           <div id="code-template"><code></code></div>
         </div>
       </div>
     </main>
-    <script src="app.js"></script>
-  </body>
-</html>
+    <!-- <script src="app.js"></script> -->
+  </div>
+{% endblock %}

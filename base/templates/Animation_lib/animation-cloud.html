@@ -1,0 +1,162 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+  <div class="animation_body">
+    <header>
+      <a href="{% url 'home' %}" class="logo">
+        <img src="assets/Logo.svg" alt="logo" width="179px" height="auto" />
+      </a>
+      <nav class="navbar">
+        <a href="{% url 'home' %}" class="bd-r">Home</a>
+        <a href="{% url 'doc_page1' %}" class="bd-r">Documentation</a>
+        <a href="#" class="active bd-r" class="bd-r">Animations</a>
+        <a href="{% url 'about' %}" class="bd-r">About</a>
+        <button>
+          <img src="assets/download-16.png" alt="download library" />
+          <span>Download</span>
+        </button>
+        <a href="">Jane Doe</a>
+      </nav>
+    </header>
+    <main>
+      <div class="animation-nav-bar">
+        <!-- <a class="animation-switch" href="">Change Colours</a> -->
+        <a class="animation-switch" href="{% url 'anim-bounce' %}">Bounce</a>
+        <a class="animation-switch" href="{% url 'anim-fade' %}">Fade</a>
+        <a class="animation-switch" href="{% url 'anim-move' %}">Move</a>
+        <a class="animation-switch active" href="{% url 'anim-cloud' %}">Cloud</a>
+        <a class="animation-switch" href="{% url 'anim-pulse' %}">Pulse</a>
+        <a class="animation-switch"  href="{% url 'anim-rotate' %}">Rotate</a>
+        <a class="animation-switch" href="">Shake</a>
+        <a class="animation-switch"  href="{% url 'anim-stretch' %}">Stretch</a>
+      </div>
+      <div class="animation-main">
+        <div class="developer-actions">
+          <a href="#"
+            ><span class="iconify-inline" data-icon="carbon:reset-alt"
+              >Reset</span
+            ></a
+          >
+          <a href="#"
+            ><span class="iconify-inline" data-icon="jam:code"
+              >Copy Code</span
+            ></a
+          >
+          <a href="#"
+            ><span class="iconify-inline" data-icon="bi:filetype-doc"
+              >Show Documentation</span
+            ></a
+          >
+        </div>
+        <div class="animation-container">
+          <form class="animation-options" action="" method="">
+            <h2>Options</h2>
+            <!-- Bounce Animation Options Start -->
+            <label for="object">Select Object</label>
+            <select
+              class="input-drop"
+              name="object"
+              id="object"
+              required
+              
+            >
+              <option value="circle" selected>Circle</option>
+              <option value="cube">Cube</option>
+            </select>
+            <label for="variant">Variation</label>
+            <select class="input-drop" name="Variation" id="variant" required>
+              <option value="cloud" selected>Big Cloud (Others Available Soon)</option>
+            </select>
+            <label for="duration-range">Duration (Seconds)</label>
+            <input
+              class="slider"
+              type="range"
+              min="1"
+              max="30"
+              value="10"
+              name="duration-range"
+              id="duration-range"
+            />
+            <label for="delay-range">Delay (Seconds)</label>
+            <input
+              class="slider"
+              type="range"
+              min="1"
+              max="30"
+              value="10"
+              name="delay-range"
+              id="delay-range"
+              disabled
+            />
+            <div class="options-group">
+              <div>
+                <label for="play-mode">Play Mode</label>
+                <select
+                  class="input-drop"
+                  name="play-mode"
+                  id="play-mode"
+                  required
+                >
+                  <option value="running" selected>Running</option>
+                  <option value="paused">Paused</option>
+                </select>
+              </div>
+              <div>
+                <label for="direction">Direction</label>
+                <select
+                  class="input-drop"
+                  name="direction"
+                  id="direction"
+                  required
+                >
+                  <option value="normal" selected>Normal</option>
+                  <option value="reverse">Reverse</option>
+                  <option value="alternate">Alternate</option>
+                  <option value="alternate-reverse">Alternate-Reverse</option>
+                </select>
+              </div>
+            </div>
+            <label for="iteration">Iteration-Count</label>
+            <div class="iteration-group">
+              <div>
+                <input
+                  class="slider"
+                  type="range"
+                  min="1"
+                  max="20"
+                  value="5"
+                  name="iteration"
+                  id="iteration  "
+                />
+              </div>
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="infinite"
+                id="infinite"
+                value="Infinite"
+              /><label for="infinite">Infinite</label>
+            </div>
+
+            <label for="timing-function">Timing-Function</label>
+            <select
+              class="input-drop"
+              name="timing-function"
+              id="timing-function"
+              required
+            >
+              <option value="linear" selected>Linear</option>
+              <option value="ease">Ease</option>
+              <option value="ease-in">Ease-in</option>
+              <option value="ease-out">Ease-out</option>
+              <option value="ease-in-out">Ease-in-out</option>
+            </select>
+            <!-- Bounce Animation Options End -->
+          </form>
+          <div id="bigcloud" class="animation-object"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+{% endblock %}

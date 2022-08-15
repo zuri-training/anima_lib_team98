@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Animation Page</title>
-    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="animax.css">
+{% extends 'main.html' %}
 
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  </head>
 
-  <body>
+{% block content %}
+  <div class="animation_body">
     <header>
       <a href="index.html" class="logo">
         <img src="assets/Logo.svg" alt="logo" width="179px" height="auto" />
@@ -34,74 +20,63 @@
       </nav>
     </header>
     <main>
+      <div class="animation-intro">
+        <a class="animation-prev" href="animation-bounce.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M27.5 16.5H5.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M14.5 7.5L5.5 16.5L14.5 25.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </a>
+          <div class="animation-intro-content">
+            <p>PULSE</p>
+            <p>Creates a pulsating effect</p>
+          </div>
+        <a class="animation-right" href="animation-fade.html"><svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.5 16.5H27.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.5 25.5L27.5 16.5L18.5 7.5" stroke="#4A4656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </a>
+      </div>
       <div class="animation-nav-bar">
-        <!-- <a class="animation-switch" href="">Change Colours</a> -->
-        <a class="animation-switch" href="animation-demo-bounce.html">Bounce</a>
-        <a class="animation-switch" href="animation-demo-fade.html">Fade</a>
-        <a class="animation-switch" href="animation-demo-move.html">Move</a>
-        <a class="animation-switch active" href="#">Cloud</a>
-        <a class="animation-switch" href="animation-demo-pulse.html">Pulse</a>
-        <a class="animation-switch" href="animation-demo-rotate.html">Rotate</a>
-        <a class="animation-switch" href="">Shake</a>
-        <a class="animation-switch" href="animation-demo-stretch.html">Stretch</a>
+        <a class="animation-switch" href="animation-pulse.html">pulse</a>
+        <a class="animation-switch active" href="#">heartbeat</a>
       </div>
       <div class="animation-main">
         <div class="developer-actions">
-          <a href="#"
-            ><span class="iconify-inline" data-icon="carbon:reset-alt"
-              >Reset</span
-            ></a
-          >
-          <a href="#"
-            ><span class="iconify-inline" data-icon="jam:code"
-              >Copy Code</span
-            ></a
-          >
-          <a href="#"
-            ><span class="iconify-inline" data-icon="bi:filetype-doc"
-              >Show Documentation</span
-            ></a
-          >
+          <a href="#"><img width="25px" src="assets/Repeat.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="assets/CodeSimple.svg" alt="" /></a>
+          <a href="#"><img width="25px" src="assets/Heart.svg" alt="" /></a>
         </div>
         <div class="animation-container">
           <form class="animation-options" action="" method="">
             <h2>Options</h2>
             <!-- Bounce Animation Options Start -->
-            <label for="object">Select Object</label>
-            <select
-              class="input-drop"
-              name="object"
-              id="object"
-              required
-              
+            <label for="object">Name</label>
+            <select class="input-drop bt-15" name="object" id="object" required>
+              <option value="circle" disabled selected>Myanimax</option>
+            </select>
+            <label for="duration-range"
+              >Variation (Duration: 0 - 5 Seconds)</label
             >
-              <option value="circle" selected>Circle</option>
-              <option value="cube">Cube</option>
-            </select>
-            <label for="variant">Variation</label>
-            <select class="input-drop" name="Variation" id="variant" required>
-              <option value="cloud" selected>Big Cloud (Others Available Soon)</option>
-            </select>
-            <label for="duration-range">Duration (Seconds)</label>
             <input
-              class="slider"
+              class="slider bt-15 top-10"
               type="range"
-              min="1"
-              max="30"
-              value="10"
+              min="0"
+              max="5"
+              value="1"
+              step="0.25"
               name="duration-range"
               id="duration-range"
             />
-            <label for="delay-range">Delay (Seconds)</label>
+            <label for="delay-range">Variation (Delay: 0 - 5 Seconds)</label>
             <input
-              class="slider"
+              class="slider bt-15 top-10"
               type="range"
-              min="1"
-              max="30"
-              value="10"
+              min="-2"
+              max="10"
+              step="0.25"
+              value="1"
               name="delay-range"
               id="delay-range"
-              disabled
             />
             <div class="options-group">
               <div>
@@ -112,8 +87,8 @@
                   id="play-mode"
                   required
                 >
-                  <option value="running" selected>Running</option>
-                  <option value="paused">Paused</option>
+                  <option value="running">Running</option>
+                  <option value="paused" selected>Paused</option>
                 </select>
               </div>
               <div>
@@ -127,21 +102,23 @@
                   <option value="normal" selected>Normal</option>
                   <option value="reverse">Reverse</option>
                   <option value="alternate">Alternate</option>
-                  <option value="alternate-reverse">Alternate-Reverse</option>
+                  <option value="alternate-reverse">
+                    Alternate-Reverse
+                  </option>
                 </select>
               </div>
             </div>
-            <label for="iteration">Iteration-Count</label>
+            <label for="iteration">Iteration-Count (Count: 1 - 50)</label>
             <div class="iteration-group">
               <div>
                 <input
-                  class="slider"
+                  class="slider top-10"
                   type="range"
                   min="1"
-                  max="20"
+                  max="50"
                   value="5"
                   name="iteration"
-                  id="iteration  "
+                  id="iteration"
                 />
               </div>
               <input
@@ -168,9 +145,11 @@
             </select>
             <!-- Bounce Animation Options End -->
           </form>
-          <div id="bigcloud" class="animation-object"></div>
+          <div id="heartbeat" class="animation-object"></div>
+          <div id="code-template"><code></code></div>
         </div>
       </div>
     </main>
-  </body>
-</html>
+    <!-- <script src="app.js"></script> -->
+  </div>
+{% endblock %}

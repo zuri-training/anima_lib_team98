@@ -36,7 +36,93 @@ def about(request):
 
 @login_required(login_url='signin')
 def animation(request):
-    return HttpResponse('Animation Page not ready yet')
+    return render(request, 'Animation_lib/animation-blink.html')
+
+
+@login_required(login_url='signin')
+def animation_two(request):
+    return render(request, 'Animation_lib/animation-blink-2.html')
+
+@login_required(login_url='signin')
+def animation_cloud(request):
+    return render(request, 'Animation_lib/animation-cloud.html')
+
+@login_required(login_url='signin')
+def animation_fade(request):
+    return render(request, 'Animation_lib/animation-fade.html')
+
+@login_required(login_url='signin')
+def animation_fade_two(request):
+    return render(request, 'Animation_lib/animation-fade-2.html')
+
+@login_required(login_url='signin')
+def animation_fade3(request):
+    return render(request, 'Animation_lib/animation-fade-3.html')
+
+@login_required(login_url='signin')
+def animation_fade4(request):
+    return render(request, 'Animation_lib/animation-fade-4.html')
+
+@login_required(login_url='signin')
+def animation_rotate(request):
+    return render(request, 'Animation_lib/animation-rotate.html')
+
+@login_required(login_url='signin')
+def animation_rotate_two(request):
+    return render(request, 'Animation_lib/animation-rotate-2.html')
+
+@login_required(login_url='signin')
+def animation_rotate3(request):
+    return render(request, 'Animation_lib/animation-rotate-3.html')
+
+@login_required(login_url='signin')
+def animation_rotate4(request):
+    return render(request, 'Animation_lib/animation-rotate-4.html')
+
+@login_required(login_url='signin')
+def animation_stretch(request):
+    return render(request, 'Animation_lib/animation-stretch.html')
+
+@login_required(login_url='signin')
+def animation_stretch_two(request):
+    return render(request, 'Animation_lib/animation-stretch-2.html')
+
+@login_required(login_url='signin')
+def animation_stretch3(request):
+    return render(request, 'Animation_lib/animation-stretch-3.html')
+
+
+@login_required(login_url='signin')
+def animation_pulse(request):
+    return render(request, 'Animation_lib/animation-pulse.html')
+
+@login_required(login_url='signin')
+def animation_pulse_two(request):
+    return render(request, 'Animation_lib/animation-pulse-2.html')
+
+@login_required(login_url='signin')
+def animation_bounce(request):
+    return render(request, 'Animation_lib/animation-bounce.html')
+
+@login_required(login_url='signin')
+def animation_bounce_two(request):
+    return render(request, 'Animation_lib/animation-bounce-2.html')
+
+@login_required(login_url='signin')
+def animation_move_two(request):
+    return render(request, 'Animation_lib/animation-move-2.html')
+
+@login_required(login_url='signin')
+def animation_move(request):
+    return render(request, 'Animation_lib/animation-move.html')
+
+@login_required(login_url='signin')
+def animation_move3(request):
+    return render(request, 'Animation_lib/animation-move-3.html')
+
+@login_required(login_url='signin')
+def animation_move4(request):
+    return render(request, 'Animation_lib/animation-move-4.html')
 
 def faq(request):
     return render(request, 'Animation_lib/faq.html')
