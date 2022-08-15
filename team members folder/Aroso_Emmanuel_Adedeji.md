@@ -26,7 +26,7 @@
 13) Add feature for authenticated users copy their generated animation code combinations and save to download later : https://github.com/zuri-training/anima_lib_team98/issues/104
 
 14) Allow users to interact with the animation on the platform and dynamically generate code combinations : 
-https://github.com/zuri-training/anima_lib_team98/issues/103
+https://github.com/zuri-training/anima_lib_team98/issues/103 , https://github.com/zuri-training/anima_lib_team98/commit/fc3c167aa00da9c8c7fc9dbe739f464990da0871
 
 15) Publish the library as a package that users can npm install as animax-css : https://github.com/zuri-training/anima_lib_team98/issues/108
 
