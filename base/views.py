@@ -24,6 +24,18 @@ def doc_page3(request):
 def doc_page4(request):
     return render(request, 'Animation_lib/doc_page4.html')
 
+def reset(request):
+    return render(request, 'Animation_lib/reset.html')
+
+def resetdone(request):
+    return render(request, 'Animation_lib/resetdone.html')
+
+def resetconfirm(request):
+    return render(request, 'Animation_lib/resetconfirm.html')
+
+def resetcomplete(request):
+    return render(request, 'Animation_lib/resetcomplete.html')
+
 
 @login_required(login_url='signin')
 def about(request):
@@ -185,4 +197,4 @@ def signinform(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('signin')
+    return redirect('home')

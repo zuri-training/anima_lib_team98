@@ -9,24 +9,37 @@
     <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.12.0/css/all.css'>
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
 
+    <!-- from resetcomplete page -->
+    <link rel="stylesheet" type="text/css" href="{% static '../static/style/resetcomplete.css' %}" />
+
+    <!-- from resetconfirm page -->
+    <link rel="stylesheet" type="text/css" href="{% static '../static/style/resetconfirm.css' %}" />
+
     <!-- from animation page -->
-    <link rel="stylesheet" href="animax.css" />
-    <link rel="stylesheet" type="text/css" href="bounce.css" />
-    <link rel="stylesheet" type="text/css" href="cloud.css" />
+    <link rel="stylesheet" href="{% static '../static/style/animax.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '../static/style/bounce.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static '../static/style/cloud.css' %}" />
+
+     <!-- from reset page -->
+    <link rel="stylesheet" type="text/css" href="../static/style/reset.css" />
+
+    <!-- from resetdone page -->
+    <link rel="stylesheet" type="text/css" href="../static/style/resetdone.css' %}" />
 
 
-    <!-- from animation page -->
+    <!-- from download page -->
+    <link rel="stylesheet" href="{% static '../static/style/download-page.css' %}" />
 
     <!-- from homepage -->
-    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
+    <link rel="stylesheet" type="text/css"  href="{% static '../static/style/animation-demo.css' %}" />
 
-    <link rel="stylesheet" type="text/css" href="animation-demo.css" />
+    <link rel="stylesheet" type="text/css" href="{% static '../static/style/animation-demo.css' %}" />
 
     <!-- from about page -->
     <link rel="icon" type="image/svg" sizes="32x32" href="../static/images/Animax.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../static/style/index.css" />
+    <link rel="stylesheet" href="{% static '../static/style/index.css' %}" />
     <link rel="stylesheet" href="{% static '../static/style/about_us.css' %}">
 
     <!-- from FAQ page -->
@@ -38,14 +51,14 @@
     <!-- from doc_page.html -->
     <link href="{% static '../static/style/doc_page.css' %}" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
-    
 
     <!-- sign up html -->
-    <link rel="stylesheet" href="{% static '../static/style/signup.css' %}" />
+    <link href="{% static '../static/style/signup.css' %}" rel="stylesheet" type="text/css" />
 
     <!-- signin.html -->
-    <link rel="stylesheet" href="{% static '../static/style/signin.css' %}" />
+    <link href="{% static '../static/style/signin.css' %}" rel="stylesheet" type="text/css" />
 
+    
     <title>AnimaX</title>
 </head>
 <body>
@@ -60,6 +73,7 @@
     <script src="https://kit.fontawesome.com/882fb8e114.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/doc_page.js' %}"></script>
     <script src="{% static 'js/anim.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
 </html>

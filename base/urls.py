@@ -8,7 +8,11 @@ urlpatterns = [
     path('signin/', views.signinform, name='signin'),
     path('logout/', views.logoutUser, name='logout'),
     path('about/', views.about, name='about'),
-    # path('documentation/', views.documentation, name='documentation'),
+    path('reset/', views.reset, name='reset'),
+    path('resetdone/', views.resetdone, name='resetdone'),
+    path('resetconfirm/', views.resetconfirm, name='resetconfirm'),
+    path('resetcomplete/', views.resetcomplete, name='resetcomplete'),
+    
     path('animation/', views.animation, name='animation'),
     path('faq/', views.faq, name='faq'),
     path('doc_type1/', views.doc_page1, name='doc_page1'),

@@ -8,22 +8,22 @@
     </header>
     <!-- Signin Section -->
 
-    <section>
+    <section class="signin_sec">
       <form action="" method="POST">
         {% csrf_token %}
-        <fieldset>
+        <fieldset class="signin_fieldset">
 
           <h2>Welcome to Anima Lib</h2>
 
-          <div>
+          <div class="signin_div">
             <p>
-              <label for="E-mail">Email</label>
+              <label class="signin_label" for="E-mail">Email</label>
               <br />
               <input class="details" type="email" name="email" placeholder="johndoe@gmail.com" required/>
             </p>
 
             <p>
-              <label for="password">Password</label>
+              <label class="signin_label" for="password">Password</label>
               <br />
               <input class="details" type="password" name="password" placeholder="********"
                 title="Password must be 8 or more characters, containing at least one number, one UPPERCASE and lowercase letter"
@@ -50,7 +50,7 @@
             <div class="remember">
               <label for="remember"><input type="checkbox" id="remember" name="remember" />
                 Remember me</label>
-              <a class="forgpass" href="#">Forgot password?</a>
+              <a class="forgpass" href="{% url 'reset' %}">Forgot password?</a>
             </div>
           </div>
 
@@ -65,5 +65,3 @@
     </section>
   </div>
 {% endblock %}
-
-<!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->

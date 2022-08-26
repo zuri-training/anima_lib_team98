@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+  <div class="resetcomplete_body">
+    <header>
+        <div class="reset_complete_img">
+            <img src="../static/images/Logo.png" class="logo">
+        </div>
+    </header>
+    <main class="reset_complete_main">
+        <div class="back">
+            <a href={{request.META.HTTP_REFERER}}><ion-icon name="arrow-back"></ion-icon></a>
+        </div> 
+        <div class="complete_container">
+            <h2>Password reset complete</h2>
+            <p>Your password has been set. <br> You can log in now. </p>
+            <p class="log">Back to <a href="" class="log1">Sign in </a></p>
+        </div>
+    </main> 
+  </div>
+{% endblock %}

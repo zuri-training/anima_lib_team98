@@ -7,7 +7,7 @@
     border: none;
 }
 
-body {
+.animation_body {
     margin: auto;
     font-family: 'Open Sans';
     font-size: 18px;
