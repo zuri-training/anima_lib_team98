@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 @media only screen and (max-width: 1440px) {
-  body {
+  .body {
     font-family: "Open Sans";
   }
-  header {
+  .header {
     font-family: "Open Sans";
     font-size: 18px;
     font-weight: 400;
@@ -242,5 +242,192 @@
   .footer-3 img,
   .footer-3 svg {
     margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .body {
+    font-family: "Open Sans";
+    font-size: 11px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .faq {
+    font-size: 120%;
+  }
+  .body a {
+    text-decoration: none;
+  }
+  .logo {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 100%;
+    justify-content: center;
+  }
+  .header {
+    margin: auto;
+    font-family: "Open Sans";
+    font-size: 11px;
+    font-weight: 400;
+    color: #170317;
+    width: 100%;
+    padding: 15px 80px 15px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7d1b7e;
+    border-bottom: 2px solid rgba(21, 5, 21, 0.2);
+    box-shadow: 0px 2px 4px rgba(21, 5, 21, 0.2);
+    transition: all 0.5s linear;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .bd-r {
+    color: #f2f1f4;
+    font-size: 11px;
+    padding: 3px 13px;
+    border: none;
+  }
+  .header .navbar .active {
+    color: #ff8095;
+    text-decoration: underline;
+  }
+  #sign-up {
+    text-decoration: none;
+    color: #f2f1f4;
+    font-size: 11px;
+  }
+  .sign-up {
+    background-color: inherit;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #f2f1f4;
+  }
+  .download {
+    background-color: #ff4d6a;
+    padding: 9px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  .download .span {
+    font-size: 11px;
+    margin-left: 4px;
+    padding-left: 8px;
+    padding-right: 2px;
+    color: #fce8fc;
+    border-left: 1px solid #fce8fc;
+  }
+  .accordion {
+    font-size: 80%;
+    text-align: left;
+  }
+  .panel {
+    font-size: 70%;
+  }
+  .newsletter {
+    background-color: #f1c0f2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    text-align: center;
+  }
+  .newslet-content {
+    background-color: inherit;
+    width: 100%;
+  }
+  .newslet-content p:first-child {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .newslet-content p:last-child {
+    color: #4a4656;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .newslet-form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .newslet-form input {
+    padding: 5px 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #a29daf;
+    border-radius: 8px 0px 0px 8px;
+    width: 70%;
+  }
+  .newslet-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff4d6a;
+    border-radius: 0px 8px 8px 0px;
+    font-size: 12px;
+    color: #f2f2f2;
+  }
+  .footer {
+    background-color: #7d1b7e;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #fce8fc;
+    font-size: 12px;
+    font-weight: 400px;
+  }
+  .footer h6 {
+    color: #ffb580;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4%;
+  }
+  .footer a {
+    color: #fce8fc;
+  }
+  .footer-1 .logo {
+    margin: 26px 0;
+  }
+  .footer-1 {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .footer-1 .ionicon {
+    fill: azure;
+    width: 25px;
+    margin-right: 28.5px;
+  }
+  .footer-2,
+  .footer-3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: flex-start;
+    margin-top: 2%;
+  }
+  .footer-2 a {
+    margin-bottom: 2%;
+  }
+  .footer-3 div {
+    margin-bottom: 2%;
+  }
+  .footer-3 img,
+  .footer-3 svg {
+    margin-right: 2%;
+  }
+  .copyright {
+    margin-top: 5%;
   }
 }
